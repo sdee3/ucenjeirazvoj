@@ -1,0 +1,22 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+@import "variables";
+@import "normalize";
+
+@import "components/main.scss";
+
+@import "pages/home";
+@import "pages/services";
+@import "pages/blog";
+@import "pages/questionnaire";
+
+@import "responsive";
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
