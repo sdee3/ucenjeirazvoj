@@ -5,24 +5,18 @@ export default function Contact() {
   return (
     <section className='contact' id='contact'>
       <div className='container'>
-        <h2>Contact Us</h2>
+        <h2>Kontaktirajte nas</h2>
         <section className='contact-sections'>
           <section>
-            <h3>Leave a message</h3>
+            <h3>Preko forme:</h3>
             <ContactForm />
           </section>
           <section>
-            <h3>Contact Info</h3>
+            <h3>Informacije o nama</h3>
             <p>Učenje i razvoj</p>
-            <p>Karadjordjeva 175/16</p>
-            <p>Valjevo</p>
-            <p>Serbia</p>
-            <br />
             <p>
-              Email us:{" "}
-              <a href='mailto:aleksandar@autentikaglobal.com'>
-                aleksandar@autentikaglobal.com
-              </a>
+              Email:{" "}
+              <a href='mailto:info@ucenjeirazvoj.com'>info@ucenjeirazvoj.com</a>
             </p>
           </section>
         </section>

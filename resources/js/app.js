@@ -4,7 +4,7 @@
  * building robust, powerful web applications using React + Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -12,50 +12,50 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import React, { lazy, Suspense } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import axios from 'axios';
+import React, { lazy, Suspense } from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import axios from "axios";
 
-const Alert = lazy(() => import('./components/Alert'));
-const Home = lazy(() => import('./pages/home'));
-const AdminLogin = lazy(() => import('./pages/blog/admin'));
-const Article = lazy(() => import('./pages/blog/Article'));
-const AddArticle = lazy(() => import('./pages/blog/AddArticle'));
-const Blog = lazy(() => import('./pages/blog'));
-const Edit = lazy(() => import('./pages/blog/Edit'));
-const Page404 = lazy(() => import('./pages/404'));
-const Questionnaire = lazy(() => import('./pages/questionnaire'));
-const Services = lazy(() => import('./pages/services'));
+const Alert = lazy(() => import("./components/Alert"));
+const Home = lazy(() => import("./pages/home"));
+const AdminLogin = lazy(() => import("./pages/blog/admin"));
+const Article = lazy(() => import("./pages/blog/Article"));
+const AddArticle = lazy(() => import("./pages/blog/AddArticle"));
+const Blog = lazy(() => import("./pages/blog"));
+const Edit = lazy(() => import("./pages/blog/Edit"));
+const Page404 = lazy(() => import("./pages/404"));
+const Questionnaire = lazy(() => import("./pages/questionnaire"));
+const Services = lazy(() => import("./pages/services"));
 const ExportMarketIntel = lazy(() =>
-  import('./pages/services/ExportMarketIntel')
+  import("./pages/services/ExportMarketIntel")
 );
-const FindingBuyers = lazy(() => import('./pages/services/FindingBuyers'));
+const FindingBuyers = lazy(() => import("./pages/services/FindingBuyers"));
 const ExportMarketStrategyDev = lazy(() =>
-  import('./pages/services/ExportMarketStrategyDev')
+  import("./pages/services/ExportMarketStrategyDev")
 );
 const OrganisationalDev = lazy(() =>
-  import('./pages/services/OrganisationalDev')
+  import("./pages/services/OrganisationalDev")
 );
 const TrainingExporters = lazy(() =>
-  import('./pages/services/TrainingExporters')
+  import("./pages/services/TrainingExporters")
 );
 
-const Navbar = lazy(() => import('./components/Navbar'));
-const Contact = lazy(() => import('./components/Contact'));
-const Footer = lazy(() => import('./components/Footer'));
+const Navbar = lazy(() => import("./components/Navbar"));
+const Contact = lazy(() => import("./components/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
 
 const CategoriesContext = React.createContext();
 const AlertContext = React.createContext();
 
 const App = () => {
   const [categories, setCategories] = React.useState([]);
-  const [alertMessage, setAlertMessage] = React.useState('');
-  const [alertState, setAlertState] = React.useState('');
+  const [alertMessage, setAlertMessage] = React.useState("");
+  const [alertState, setAlertState] = React.useState("");
 
   React.useEffect(() => {
     axios
-      .get('/api/categories')
+      .get("/api/categories")
       .then((res) => setCategories(res.data))
       .catch((err) => console.error(err.response));
   }, []);
@@ -65,8 +65,8 @@ const App = () => {
     setAlertState(state);
 
     setTimeout(() => {
-      setAlertMessage('');
-      setAlertState('');
+      setAlertMessage("");
+      setAlertState("");
     }, 2500);
   };
 
@@ -130,8 +130,8 @@ const App = () => {
   );
 };
 
-if (document.getElementById('app')) {
-  ReactDOM.render(<App />, document.getElementById('app'));
+if (document.getElementById("app")) {
+  ReactDOM.render(<App />, document.getElementById("app"));
 }
 
 export { AlertContext, CategoriesContext };

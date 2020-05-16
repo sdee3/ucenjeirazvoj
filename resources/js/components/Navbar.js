@@ -9,7 +9,7 @@ export default function Navbar() {
           <Link to='/'>
             <img
               alt='Učenje i razvoj navbar logo'
-              src='https://res.cloudinary.com/sdee3-com/image/upload/v1560004828/autentika/autentika-logo.png'
+              src='https://image.flaticon.com/icons/png/512/46/46564.png'
             />
             <p>Učenje i razvoj</p>
           </Link>
@@ -23,11 +23,12 @@ export default function Navbar() {
           </label>
         </section>
         <section className='navbar__links'>
-          <Link to='/'>Home</Link>
-          <Link to='/export-intelligence-questionnaire'>Questionnaire</Link>
-          <Link to='/services'>Services</Link>
+          <Link to='/'>Naslovna</Link>
+          <Link to='/teme'>Teme</Link>
+          <Link to='/services'>Podrška</Link>
           <Link to='/blog'>Blog</Link>
-          <a href='#contact'>Contact</a>
+          <Link to='/blog'>Citati</Link>
+          <a href='#contact'>Kontakt</a>
         </section>
       </div>
     </section>

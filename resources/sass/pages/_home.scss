@@ -4,19 +4,26 @@
   }
 
   &__main-img {
-    background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/v1560007817/autentika/Screenshot_from_2019-06-08_17-29-58.png");
+    background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/e_brightness:-10/v1589613317/ucenjeirazvoj/hands-2847508_960_720.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 60vh;
+    height: 50vh;
+    margin: 0 auto;
 
     .container {
       color: $white;
-      padding-top: 10%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
       text-align: center;
-      width: 100%;
 
       h1 {
+        background-color: $indigo;
+        border-radius: 4px;
         font-size: 2.5rem;
+        padding: 0.25rem;
       }
     }
   }
@@ -57,6 +64,18 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     text-align: center;
+
+    h3 {
+      border: 1px solid $indigo;
+      border-radius: 4px;
+      padding: 3rem;
+
+      &:focus,
+      &:hover {
+        background-color: $indigo;
+        color: $white;
+      }
+    }
   }
 
   &__promo {
