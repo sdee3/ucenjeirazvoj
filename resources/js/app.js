@@ -44,9 +44,13 @@ const Footer = lazy(() => import("./components/Footer"));
 
 const CategoriesContext = React.createContext();
 const AlertContext = React.createContext();
+const TopicsContext = React.createContext();
+const SubTopicsContext = React.createContext();
 
 const App = () => {
   const [categories, setCategories] = React.useState([]);
+  const [topics, setTopics] = React.useState([]);
+  const [subTopics, setSubTopics] = React.useState([]);
   const [alertMessage, setAlertMessage] = React.useState("");
   const [alertState, setAlertState] = React.useState("");
 
@@ -54,6 +58,16 @@ const App = () => {
     axios
       .get("/api/categories")
       .then((res) => setCategories(res.data))
+      .catch((err) => console.error(err.response));
+
+    axios
+      .get("/api/topics")
+      .then((res) => setTopics(res.data))
+      .catch((err) => console.error(err.response));
+
+    axios
+      .get("/api/subtopics")
+      .then((res) => setSubTopics(res.data))
       .catch((err) => console.error(err.response));
   }, []);
 
@@ -68,6 +82,8 @@ const App = () => {
   };
 
   const updateCategories = (categories) => setCategories(categories);
+  const updateTopics = (topics) => setTopics(topics);
+  const updateSubTopics = (subtopics) => setSubTopics(subtopics);
 
   return (
     <Router>
@@ -80,14 +96,14 @@ const App = () => {
             <CategoriesContext.Provider
               value={{ categories, updateCategories }}
             >
-              <Route exact path='/teme' component={Topics} />
-              <Route
-                exact
-                path='/teme/deca-i-odrastanje'
-                component={DecaOdrastanje}
-              />
-              <Route exact path='/teme/roditeljstvo' component={Roditeljstvo} />
-              <Route exact path='/teme/licni-razvoj' component={LicniRazvoj} />
+              <TopicsContext.Provider value={{ topics, updateTopics }}>
+                <SubTopicsContext.Provider
+                  value={{ subTopics, updateSubTopics }}
+                >
+                  <Route exact path='/teme' component={Topics} />
+                </SubTopicsContext.Provider>
+              </TopicsContext.Provider>
+
               <Route exact path='/podrska' component={Support} />
               <Route
                 exact

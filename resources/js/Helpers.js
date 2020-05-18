@@ -112,32 +112,31 @@ const areInputsValid = (name, email, message) => {
 };
 
 const decaOdrastanjeTeme = [
-  { value: "1", label: "Stidljivost ili je nešto drugo u pitanju" },
-  { value: "2", label: "Deca i osećanja - ljutnja" },
-  { value: "3", label: "Prilagodljivost i deca" },
-  { value: "4", label: "Najčešći problem u učenju" },
-  { value: "5", label: "Značaj emocionalnog razvoja" },
-  { value: "6", label: "Sistem uspešnog učenja" },
-  { value: "7", label: "Da li sam ok iz ugla deteta" },
+  { value: "1", label: "" },
+  { value: "2", label: "" },
+  { value: "3", label: "" },
+  { value: "4", label: "" },
+  { value: "5", label: "" },
+  { value: "6", label: "" },
+  { value: "7", label: "" },
 ];
 
 const licniRazvojTeme = [
-  { value: "1", label: "Začarani krug anksioznosti i kvaliteta sna" },
-  { value: "2", label: "Kako naša uverenja utiču na kvalitet života" },
-  { value: "3", label: "Realistični optimizam" },
-  { value: "4", label: "Mentalno zdravlje i negovanje sebe" },
-  { value: "5", label: "Važnost slušanja" },
+  { value: "1", label: "" },
+  { value: "2", label: "" },
+  { value: "3", label: "" },
+  { value: "4", label: "" },
+  { value: "5", label: "" },
 ];
 
 const roditeljstvoTeme = [
   {
     value: "1",
-    label:
-      "Disciplina – šta je i kako nam može pomoći da budemo bolji roditelj",
+    label: "",
   },
-  { value: "2", label: "Mercedes model vaspitanja" },
-  { value: "3", label: "Kako biti odgovoran roditelj" },
-  { value: "4", label: "Roditeljstvo i tinejdžeri – šta sa konfliktima" },
+  { value: "2", label: "" },
+  { value: "3", label: "" },
+  { value: "4", label: "" },
 ];
 
 export {

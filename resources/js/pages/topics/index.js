@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Questionanire() {
+export default function Teme() {
   return (
     <section className='topics-page container'>
       <h1>Teme</h1>

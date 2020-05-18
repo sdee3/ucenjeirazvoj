@@ -1,8 +1,7 @@
-import React, { lazy } from "react";
+import React from "react";
+import Dropdown from "react-dropdown";
 import { roditeljstvoTeme } from "../../Helpers";
 import "react-dropdown/style.css";
-
-const Dropdown = lazy(() => import("react-dropdown"));
 
 export default function Roditeljstvo() {
   const [selectedTopic, setSelectedTopic] = React.useState("");
