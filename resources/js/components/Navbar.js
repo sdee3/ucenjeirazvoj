@@ -25,9 +25,9 @@ export default function Navbar() {
         <section className='navbar__links'>
           <Link to='/'>Naslovna</Link>
           <Link to='/teme'>Teme</Link>
-          <Link to='/services'>Podrška</Link>
+          <Link to='/podrska'>Podrška</Link>
           <Link to='/blog'>Blog</Link>
-          <Link to='/blog'>Citati</Link>
+          <Link to='/citati'>Citati</Link>
           <a href='#contact'>Kontakt</a>
         </section>
       </div>

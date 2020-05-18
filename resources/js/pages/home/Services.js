@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
@@ -6,15 +7,18 @@ export default function Services() {
       <div className='container'>
         <h2>Usluge</h2>
         <div className='services'>
-          <div>
-            <h3>Deca i odrastanje</h3>
-          </div>
-          <div>
-            <h3>Roditeljstvo</h3>
-          </div>
-          <div>
-            <h3>Lični razvoj</h3>
-          </div>
+          <Link
+            className='topics-page__topics--topic'
+            to='/teme/deca-i-odrastanje'
+          >
+            Deca i odrastanje
+          </Link>
+          <Link className='topics-page__topics--topic' to='/teme/roditeljstvo'>
+            Roditeljstvo
+          </Link>
+          <Link className='topics-page__topics--topic' to='/teme/licni-razvoj'>
+            Lični rast i lični razvoj
+          </Link>
         </div>
       </div>
     </section>

@@ -75,11 +75,6 @@
       &:last-of-type {
         padding-right: 0;
       }
-
-      &:focus,
-      &:hover {
-        color: darken($text-white, 20);
-      }
     }
   }
 }

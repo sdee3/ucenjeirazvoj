@@ -25,21 +25,18 @@ const AddArticle = lazy(() => import("./pages/blog/AddArticle"));
 const Blog = lazy(() => import("./pages/blog"));
 const Edit = lazy(() => import("./pages/blog/Edit"));
 const Page404 = lazy(() => import("./pages/404"));
-const Questionnaire = lazy(() => import("./pages/questionnaire"));
-const Services = lazy(() => import("./pages/services"));
-const ExportMarketIntel = lazy(() =>
-  import("./pages/services/ExportMarketIntel")
+
+const Topics = lazy(() => import("./pages/topics"));
+const DecaOdrastanje = lazy(() => import("./pages/topics/DecaOdrastanje"));
+const Roditeljstvo = lazy(() => import("./pages/topics/Roditeljstvo"));
+const LicniRazvoj = lazy(() => import("./pages/topics/LicniRazvoj"));
+
+const Support = lazy(() => import("./pages/support"));
+const PodrskaDeci = lazy(() => import("./pages/support/PodrskaDeci"));
+const PodrskaRoditeljima = lazy(() =>
+  import("./pages/support/PodrskaRoditeljima")
 );
-const FindingBuyers = lazy(() => import("./pages/services/FindingBuyers"));
-const ExportMarketStrategyDev = lazy(() =>
-  import("./pages/services/ExportMarketStrategyDev")
-);
-const OrganisationalDev = lazy(() =>
-  import("./pages/services/OrganisationalDev")
-);
-const TrainingExporters = lazy(() =>
-  import("./pages/services/TrainingExporters")
-);
+const PodrskaOdraslima = lazy(() => import("./pages/support/PodrskaOdraslima"));
 
 const Navbar = lazy(() => import("./components/Navbar"));
 const Contact = lazy(() => import("./components/Contact"));
@@ -80,39 +77,32 @@ const App = () => {
           <Alert alertMessage={alertMessage} alertState={alertState} />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route
-              exact
-              path='/export-intelligence-questionnaire'
-              component={Questionnaire}
-            />
             <CategoriesContext.Provider
               value={{ categories, updateCategories }}
             >
-              <Route exact path='/services' component={Services} />
+              <Route exact path='/teme' component={Topics} />
               <Route
                 exact
-                path='/services/export-market-intelligence'
-                component={ExportMarketIntel}
+                path='/teme/deca-i-odrastanje'
+                component={DecaOdrastanje}
+              />
+              <Route exact path='/teme/roditeljstvo' component={Roditeljstvo} />
+              <Route exact path='/teme/licni-razvoj' component={LicniRazvoj} />
+              <Route exact path='/podrska' component={Support} />
+              <Route
+                exact
+                path='/podrska/podrska-deci'
+                component={PodrskaDeci}
               />
               <Route
                 exact
-                path='/services/finding-buyers'
-                component={FindingBuyers}
+                path='/podrska/podrska-roditeljima'
+                component={PodrskaRoditeljima}
               />
               <Route
                 exact
-                path='/services/export-marketing-strategy-development'
-                component={ExportMarketStrategyDev}
-              />
-              <Route
-                exact
-                path='/services/organisational-development'
-                component={OrganisationalDev}
-              />
-              <Route
-                exact
-                path='/services/training-for-exporters'
-                component={TrainingExporters}
+                path='/podrska/podrska-odraslima'
+                component={PodrskaOdraslima}
               />
               <Route exact path='/blog' component={Blog} />
               <Route exact path='/blog/admin' component={AdminLogin} />

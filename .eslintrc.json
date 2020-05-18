@@ -25,7 +25,6 @@
   "rules": {
     "react/prop-types": ["off"],
     "linebreak-style": ["error", "unix"],
-    "indent": ["error", "tab"],
     "no-console": [
       "warn",
       {
@@ -33,7 +32,6 @@
       }
     ],
     "no-mixed-spaces-and-tabs": "off",
-    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "semi": ["error", "always"]
   }
 }

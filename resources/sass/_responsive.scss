@@ -13,6 +13,10 @@
 
   .container {
     width: unset !important;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   .radio-container {
@@ -128,5 +132,9 @@
     p {
       font-size: 1rem !important;
     }
+  }
+
+  .support-page {
+    background-position: 20% 40%;
   }
 }

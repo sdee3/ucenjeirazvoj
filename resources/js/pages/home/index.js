@@ -1,6 +1,5 @@
 import React, { lazy } from "react";
 
-const QuestionnairePromo = lazy(() => import("./QuestionnairePromo"));
 const AboutUs = lazy(() => import("./AboutUs"));
 const Services = lazy(() => import("./Services"));
 const Promo = lazy(() => import("./Promo"));
