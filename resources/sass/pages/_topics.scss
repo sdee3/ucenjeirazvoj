@@ -24,6 +24,14 @@
       margin-bottom: 3rem;
       padding: 2rem;
       text-decoration: none;
+
+      &-at-homepage {
+        &:focus,
+        &:hover {
+          background-color: $indigo;
+          color: $text-white;
+        }
+      }
     }
 
     &--subtopic {

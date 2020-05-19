@@ -8,15 +8,21 @@ export default function Services() {
         <h2>Usluge</h2>
         <div className='services'>
           <Link
-            className='topics-page__topics--topic'
-            to='/teme/deca-i-odrastanje'
+            className='topics-page__topics--topic topics-page__topics--topic-at-homepage'
+            to='/teme'
           >
             Deca i odrastanje
           </Link>
-          <Link className='topics-page__topics--topic' to='/teme/roditeljstvo'>
+          <Link
+            className='topics-page__topics--topic topics-page__topics--topic-at-homepage'
+            to='/teme'
+          >
             Roditeljstvo
           </Link>
-          <Link className='topics-page__topics--topic' to='/teme/licni-razvoj'>
+          <Link
+            className='topics-page__topics--topic topics-page__topics--topic-at-homepage'
+            to='/teme'
+          >
             Lični rast i lični razvoj
           </Link>
         </div>
