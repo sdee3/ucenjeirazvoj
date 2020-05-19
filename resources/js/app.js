@@ -57,6 +57,11 @@ const App = () => {
       .get("/api/categories")
       .then((res) => setCategories(res.data))
       .catch((err) => console.error(err.response));
+
+    axios
+      .get("/api/topics")
+      .then((res) => setTopics(res.data))
+      .catch((err) => console.error(err.response));
   }, []);
 
   const setAlert = (message, state) => {

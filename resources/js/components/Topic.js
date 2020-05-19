@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
-import { AlertContext, CategoriesContext } from "../app";
+import { AlertContext } from "../app";
 
-export default function Topic({ categories, category_id, handleRadioChange }) {
+export default function Topic({ topics, topic_id, handleRadioChange }) {
   const [isEditable, setIsEditable] = React.useState(false);
   const [values, setValues] = React.useState([]);
   const [newValues, setNewValues] = React.useState([]);
@@ -10,16 +10,15 @@ export default function Topic({ categories, category_id, handleRadioChange }) {
   const [newCategory, setNewCategory] = React.useState({ name: "" });
 
   const setAlert = React.useContext(AlertContext);
-  const categoriesContext = React.useContext(CategoriesContext);
 
   React.useEffect(() => {
-    if (categories.length) {
-      setValues(categories.map((c) => c.name));
+    if (topics && topics.length) {
+      setValues(topics.map((c) => c.name));
     }
   }, []);
 
   const syncValues = () => {
-    categories.forEach((category, index) => {
+    topics.forEach((category, index) => {
       const element = document.getElementById(index);
       let newValuesArray = newValues;
       newValuesArray[index] = element.innerText;
@@ -56,26 +55,22 @@ export default function Topic({ categories, category_id, handleRadioChange }) {
     if (newCategory.name.length) {
       axios
         .post("/api/topics", newCategory)
-        .then((res) => {
-          setAlert("Category created successfully!", "success");
-          categoriesContext.updateCategories([...categories, res.data]);
+        .then(() => {
+          setAlert("Uspešno kreiranje teme!", "success");
           setInputVisible(false);
         })
         .catch((err) => setAlert(err, "danger"));
     } else {
-      setAlert("Category name is required!", "danger");
+      setAlert("Ime teme je obavezno!", "danger");
     }
   };
 
   const deleteCategory = (id) => {
-    if (confirm("Are you sure you want to delete this category?")) {
+    if (confirm("Da li sigurno želite da obrišete ovu temu?")) {
       axios
         .delete(`/api/topics/${id}`)
-        .then((res) => {
-          setAlert("Category deleted successfully!", "success");
-          categoriesContext.updateCategories(
-            categories.filter((c) => c.id !== res.data.id)
-          );
+        .then(() => {
+          setAlert("Tema uspešno izbirsana!", "success");
         })
         .catch((err) => setAlert(err, "danger"));
     }
@@ -88,54 +83,59 @@ export default function Topic({ categories, category_id, handleRadioChange }) {
 
   return (
     <>
-      {categories.map((category, index) => (
-        <label className='category__container' key={category.id}>
-          <span
-            className={
-              isEditable
-                ? "category__value category__value--active"
-                : "category__value"
-            }
-            contentEditable={isEditable}
-            id={index}
-            onClick={(e) => e.preventDefault()}
-            onKeyPress={handleKeyPress}
-          >
-            {category.name}
-          </span>
-          {category_id ? (
-            <input
-              defaultChecked={category_id === category.id}
-              name='radio'
-              onChange={handleRadioChange}
-              type='radio'
-              value={category.name}
-            />
-          ) : (
-            <input
-              name='radio'
-              onChange={handleRadioChange}
-              type='radio'
-              value={category.name}
-            />
-          )}
-          <span className='category__checkmark' />
-          {isEditable ? null : (
-            <button className='button button--edit' onClick={toggleEditable}>
-              Edit
-            </button>
-          )}
-          <button
-            className='button button--edit'
-            onClick={(e) => {
-              e.preventDefault();
-              deleteCategory(category.id);
-            }}
-          >
-            Delete
-          </button>
-        </label>
-      ))}
+      {topics
+        ? topics.map((topic, index) => (
+            <label className='category__container' key={topic.id}>
+              <span
+                className={
+                  isEditable
+                    ? "category__value category__value--active"
+                    : "category__value"
+                }
+                contentEditable={isEditable}
+                id={index}
+                onClick={(e) => e.preventDefault()}
+                onKeyPress={handleKeyPress}
+              >
+                {topic.name}
+              </span>
+              {topic_id ? (
+                <input
+                  defaultChecked={topic_id === topic.id}
+                  name='radio'
+                  onChange={handleRadioChange}
+                  type='radio'
+                  value={topic.name}
+                />
+              ) : (
+                <input
+                  name='radio'
+                  onChange={handleRadioChange}
+                  type='radio'
+                  value={topic.name}
+                />
+              )}
+              <span className='category__checkmark' />
+              {isEditable ? null : (
+                <button
+                  className='button button--edit'
+                  onClick={toggleEditable}
+                >
+                  Izmena imena
+                </button>
+              )}
+              <button
+                className='button button--edit'
+                onClick={(e) => {
+                  e.preventDefault();
+                  deleteCategory(topic.id);
+                }}
+              >
+                Obriši
+              </button>
+            </label>
+          ))
+        : null}
       {inputVisible ? (
         <div>
           <input
@@ -144,18 +144,14 @@ export default function Topic({ categories, category_id, handleRadioChange }) {
               setNewCategory({ ...newCategory, name: e.target.value })
             }
             onKeyPress={(e) => (e.key === "Enter" ? submitCategory(e) : null)}
-            placeholder='Add New Category'
+            placeholder='Dodaj novu temu'
             value={newCategory.name}
           />
           <button onClick={submitCategory} className='button button--save'>
-            Save
+            Sačuvaj
           </button>
         </div>
-      ) : (
-        <button onClick={handleClick} className='button button--small'>
-          Add New
-        </button>
-      )}
+      ) : null}
     </>
   );
 }

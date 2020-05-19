@@ -22,25 +22,15 @@ class TopicController extends Controller
 
 	public function update(Request $request)
 	{
-		$topic = Topic::where('id', $request->id)->first();
+		$newValues = $request->all();
+		$topics = Topic::all();
 
-		$validator = Validator::make(request()->all(), [
-			'name' => 'required',
-		]);
-
-		if ($validator->fails()) {
-			$errors = array();
-			foreach ($validator->errors()->all() as $error) {
-				array_push($errors, $error);
-			}
-
-			return response()->json(["messages" => $errors], 422);
-		} else {
-			$topic->name = $request->name;
-			$topic->update();
-
-			return response()->json('Topic updated successfully!', 200);
+		foreach ($topics as $key => $cat) {
+			$cat->name = $newValues[$key];
+			$cat->save();
 		}
+
+		return response()->json('Topic updated successfully!', 200);
 	}
 
 	public function delete($id)

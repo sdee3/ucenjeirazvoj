@@ -26,37 +26,13 @@ export default function AddTopic() {
   const setAlert = React.useContext(AlertContext);
 
   React.useEffect(() => {
-    axios.get("/api/topics").then((res) => setParentTopics(res.data));
+    axios.get("/api/topics").then((res) => {
+      setParentTopics(res.data);
+    });
   }, []);
 
   const handleChange = (value) => {
-    if (value.indexOf("data:image") > 0) {
-      let valuesArray = value.split("</p>");
-
-      for (let i = 0; i < valuesArray.length; i++) {
-        if (valuesArray[i].indexOf("data:image") > 0) {
-          let imgStringArray =
-            valuesArray[i].split(`<p><img src="data:`) ||
-            valuesArray[i].split(`<img src="data:`);
-
-          if (imgStringArray[1]) {
-            const sanitizedImgData = imgStringArray[1].split(`">`)[0];
-
-            axios
-              .post("/api/upload", { data: sanitizedImgData })
-              .then((response) => {
-                valuesArray[i] = `<img src="/${response.data}" />`;
-                var output = valuesArray.join("</p>");
-
-                setTopic({ ...topic, content: output });
-              })
-              .catch((err) => setAlert(err, "danger"));
-          }
-        }
-      }
-    } else {
-      setTopic({ ...topic, content: value });
-    }
+    setTopic({ ...topic, content: value });
   };
 
   const submitArticle = () => {
@@ -92,7 +68,7 @@ export default function AddTopic() {
           <>
             <Link to='/teme'>Teme</Link>
             <i className='material-icons'>keyboard_arrow_right</i>
-            <Link to='/blog/new'>Novi tekst</Link>
+            <Link to='/teme/new'>Novi tekst</Link>
           </>
         }
       />
@@ -106,24 +82,24 @@ export default function AddTopic() {
           }}
         >
           <div className='edit-article__inputs--category-select'>
-            <span>Category:</span>
+            <span>Tema:</span>
             <section className='edit-article__category-checkboxes'>
               <Topic
-                categories={parentTopics}
+                topics={parentTopics}
                 handleRadioChange={handleRadioChange}
               />
             </section>
           </div>
           <input
             onChange={(e) => setTopic({ ...topic, name: e.target.value })}
-            placeholder='Title'
+            placeholder='Naslov'
             value={topic.name}
           />
           <div className='input-group-prepend'>
             <div className='input-group-prepend__pre-input-text'>{`/tema/`}</div>
             <input
               onChange={(e) => setTopic({ ...topic, slug: e.target.value })}
-              placeholder='Article URL (automatically starts with /tema/)'
+              placeholder='URL ka tekstu (automatski počinje sa /tema/)'
               value={topic.slug}
             />
           </div>
@@ -133,7 +109,7 @@ export default function AddTopic() {
             onChange={handleChange}
             value={topic.content}
           />
-          <input className='button' type='submit' value='Submit New Topic' />
+          <input className='button' type='submit' value='Sačuvaj novi tekst' />
         </form>
       </section>
     </>

@@ -25,7 +25,7 @@ Route::delete('/article/{slug}', 'ArticleController@delete');
 
 Route::get('/topics', 'TopicController@fetch');
 Route::post('/topics', 'TopicController@submit');
-Route::put('/topics/{id}', 'TopicController@update');
+Route::put('/topics', 'TopicController@update');
 Route::delete('/topics/{id}', 'TopicController@delete');
 
 Route::get('/subtopics', 'SubTopicController@fetch');

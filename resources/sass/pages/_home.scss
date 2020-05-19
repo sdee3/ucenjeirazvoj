@@ -27,8 +27,11 @@
           justify-content: center;
 
           p {
+            background-color: $indigo;
+            border-radius: 4px;
             font-size: 1.3rem;
             font-weight: bold;
+            padding: 0.5rem;
             position: relative;
             left: -4rem;
             bottom: -1rem;

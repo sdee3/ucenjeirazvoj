@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className='container'>
         <div className='navbar__brand'>
           <Link to='/'>
-            <p>Učenje i razvoj</p>
+            <p>info@ucenjeirazvoj.com</p>
           </Link>
         </div>
         <input type='checkbox' id='nav-check' />
