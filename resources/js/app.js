@@ -27,9 +27,8 @@ const Edit = lazy(() => import("./pages/blog/Edit"));
 const Page404 = lazy(() => import("./pages/404"));
 
 const Topics = lazy(() => import("./pages/topics"));
-const DecaOdrastanje = lazy(() => import("./pages/topics/DecaOdrastanje"));
-const Roditeljstvo = lazy(() => import("./pages/topics/Roditeljstvo"));
-const LicniRazvoj = lazy(() => import("./pages/topics/LicniRazvoj"));
+const Topic = lazy(() => import("./pages/topics/Topic"));
+const EditTopic = lazy(() => import("./pages/topics/Edit"));
 
 const Support = lazy(() => import("./pages/support"));
 const PodrskaDeci = lazy(() => import("./pages/support/PodrskaDeci"));
@@ -44,13 +43,9 @@ const Footer = lazy(() => import("./components/Footer"));
 
 const CategoriesContext = React.createContext();
 const AlertContext = React.createContext();
-const TopicsContext = React.createContext();
-const SubTopicsContext = React.createContext();
 
 const App = () => {
   const [categories, setCategories] = React.useState([]);
-  const [topics, setTopics] = React.useState([]);
-  const [subTopics, setSubTopics] = React.useState([]);
   const [alertMessage, setAlertMessage] = React.useState("");
   const [alertState, setAlertState] = React.useState("");
 
@@ -58,16 +53,6 @@ const App = () => {
     axios
       .get("/api/categories")
       .then((res) => setCategories(res.data))
-      .catch((err) => console.error(err.response));
-
-    axios
-      .get("/api/topics")
-      .then((res) => setTopics(res.data))
-      .catch((err) => console.error(err.response));
-
-    axios
-      .get("/api/subtopics")
-      .then((res) => setSubTopics(res.data))
       .catch((err) => console.error(err.response));
   }, []);
 
@@ -82,8 +67,6 @@ const App = () => {
   };
 
   const updateCategories = (categories) => setCategories(categories);
-  const updateTopics = (topics) => setTopics(topics);
-  const updateSubTopics = (subtopics) => setSubTopics(subtopics);
 
   return (
     <Router>
@@ -96,13 +79,10 @@ const App = () => {
             <CategoriesContext.Provider
               value={{ categories, updateCategories }}
             >
-              <TopicsContext.Provider value={{ topics, updateTopics }}>
-                <SubTopicsContext.Provider
-                  value={{ subTopics, updateSubTopics }}
-                >
-                  <Route exact path='/teme' component={Topics} />
-                </SubTopicsContext.Provider>
-              </TopicsContext.Provider>
+              <Route exact path='/teme' component={Topics} />
+              <Route exact path='/tema/:slug' component={Topic} />
+              <Route exact path='/tema/:slug/admin' component={AdminLogin} />
+              <Route exact path='/tema/:slug/edit' component={EditTopic} />
 
               <Route exact path='/podrska' component={Support} />
               <Route

@@ -20,7 +20,7 @@ class SubTopicController extends Controller
 	public function submit(Request $request)
 	{
 		SubTopic::create([
-			'title' => $request->title,
+			'name' => $request->name,
 			'topic_id' => $request->topic_id,
 			'slug' => $request->slug,
 			'content' => $request->content,
@@ -34,7 +34,7 @@ class SubTopicController extends Controller
 		$subtopic = SubTopic::where('slug', $slug)->first();
 
 		$validator = Validator::make(request()->all(), [
-			'title' => 'required',
+			'name' => 'required',
 			'topic_id' => 'required',
 			'content' => 'required',
 			'slug' => 'required|alpha_dash',
@@ -48,10 +48,8 @@ class SubTopicController extends Controller
 
 			return response()->json(["messages" => $errors], 422);
 		} else {
-			$subtopic->title = $request->title;
-			$subtopic->caption = $request->caption;
+			$subtopic->name = $request->name;
 			$subtopic->topic_id = $request->topic_id;
-			$subtopic->cover_url = $request->cover_url;
 			$subtopic->slug = $request->slug;
 			$subtopic->content = $request->content;
 			$subtopic->update();

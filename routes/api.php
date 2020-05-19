@@ -31,8 +31,8 @@ Route::delete('/topics/{id}', 'TopicController@delete');
 Route::get('/subtopics', 'SubTopicController@fetch');
 Route::get('/tema/{slug}', 'SubTopicController@fetch');
 Route::post('/subtopics', 'SubTopicController@submit');
-Route::put('/subtopics/{slug}', 'SubTopicController@update');
-Route::delete('/subtopics/{slug}', 'SubTopicController@delete');
+Route::put('/tema/{slug}', 'SubTopicController@update');
+Route::delete('/tema/{slug}', 'SubTopicController@delete');
 
 Route::post('/upload', 'BlogController@upload');
 

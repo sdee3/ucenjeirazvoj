@@ -111,34 +111,6 @@ const areInputsValid = (name, email, message) => {
   }
 };
 
-const decaOdrastanjeTeme = [
-  { value: "1", label: "" },
-  { value: "2", label: "" },
-  { value: "3", label: "" },
-  { value: "4", label: "" },
-  { value: "5", label: "" },
-  { value: "6", label: "" },
-  { value: "7", label: "" },
-];
-
-const licniRazvojTeme = [
-  { value: "1", label: "" },
-  { value: "2", label: "" },
-  { value: "3", label: "" },
-  { value: "4", label: "" },
-  { value: "5", label: "" },
-];
-
-const roditeljstvoTeme = [
-  {
-    value: "1",
-    label: "",
-  },
-  { value: "2", label: "" },
-  { value: "3", label: "" },
-  { value: "4", label: "" },
-];
-
 export {
   areInputsValid,
   isAuthenticated,
@@ -148,7 +120,4 @@ export {
   validateArticle,
   quillFormats,
   quillModules,
-  decaOdrastanjeTeme,
-  licniRazvojTeme,
-  roditeljstvoTeme,
 };

@@ -1,9 +1,6 @@
 import React, { lazy } from "react";
 
-const AboutUs = lazy(() => import("./AboutUs"));
 const Services = lazy(() => import("./Services"));
-const Promo = lazy(() => import("./Promo"));
-const Clients = lazy(() => import("./Clients"));
 
 export default function Home() {
   return (
