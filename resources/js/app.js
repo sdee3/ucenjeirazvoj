@@ -37,6 +37,8 @@ const PodrskaRoditeljima = lazy(() =>
 );
 const PodrskaOdraslima = lazy(() => import("./pages/support/PodrskaOdraslima"));
 
+const Quotes = lazy(() => import("./pages/quotes"));
+
 const Navbar = lazy(() => import("./components/Navbar"));
 const Contact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
@@ -100,6 +102,7 @@ const App = () => {
                 path='/podrska/podrska-odraslima'
                 component={PodrskaOdraslima}
               />
+              <Route exact path='/citati' component={Quotes} />
               <Route exact path='/blog' component={Blog} />
               <Route exact path='/blog/admin' component={AdminLogin} />
               <Route exact path='/blog/new' component={AddArticle} />
