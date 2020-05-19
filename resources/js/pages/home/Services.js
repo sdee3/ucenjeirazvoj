@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <section className='home-page__services'>
       <div className='container'>
-        <h2>Usluge</h2>
+        <h2>Teme</h2>
         <div className='services'>
           <Link
             className='topics-page__topics--topic topics-page__topics--topic-at-homepage'

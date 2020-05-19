@@ -7,10 +7,6 @@ export default function Navbar() {
       <div className='container'>
         <div className='navbar__brand'>
           <Link to='/'>
-            <img
-              alt='Učenje i razvoj navbar logo'
-              src='https://image.flaticon.com/icons/png/512/46/46564.png'
-            />
             <p>Učenje i razvoj</p>
           </Link>
         </div>
@@ -26,7 +22,7 @@ export default function Navbar() {
           <Link to='/'>Naslovna</Link>
           <Link to='/teme'>Teme</Link>
           <Link to='/podrska'>Podrška</Link>
-          <Link to='/blog'>Blog</Link>
+          {/* <Link to='/blog'>Blog</Link> */}
           <Link to='/citati'>Citati</Link>
           <a href='#contact'>Kontakt</a>
         </section>
