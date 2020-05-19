@@ -27,6 +27,7 @@ const Edit = lazy(() => import("./pages/blog/Edit")); */
 const Page404 = lazy(() => import("./pages/404"));
 
 const Topics = lazy(() => import("./pages/topics"));
+const AddTopic = lazy(() => import("./pages/topics/AddTopic"));
 const Topic = lazy(() => import("./pages/topics/Topic"));
 const EditTopic = lazy(() => import("./pages/topics/Edit"));
 
@@ -82,6 +83,8 @@ const App = () => {
               value={{ categories, updateCategories }}
             >
               <Route exact path='/teme' component={Topics} />
+              <Route exact path='/teme/new' component={AddTopic} />
+              <Route exact path='/teme/admin' component={AdminLogin} />
               <Route exact path='/tema/:slug' component={Topic} />
               <Route exact path='/tema/:slug/admin' component={AdminLogin} />
               <Route exact path='/tema/:slug/edit' component={EditTopic} />

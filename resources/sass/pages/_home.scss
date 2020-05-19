@@ -21,6 +21,20 @@
       text-align: center;
 
       .heading {
+        .image-section {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+
+          p {
+            font-size: 1.3rem;
+            font-weight: bold;
+            position: relative;
+            left: -4rem;
+            bottom: -1rem;
+          }
+        }
+
         img {
           width: 200px;
         }

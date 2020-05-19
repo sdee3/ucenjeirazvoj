@@ -15,9 +15,9 @@ class TopicController extends Controller
 
 	public function submit(Request $request)
 	{
-		Topic::create(['name' => $request->name]);
+		$topic = Topic::create(['name' => $request->name]);
 
-		return response()->json('Topic created successfully!', 201);
+		return $topic;
 	}
 
 	public function update(Request $request)
@@ -43,11 +43,11 @@ class TopicController extends Controller
 		}
 	}
 
-	public function delete(number $id)
+	public function delete($id)
 	{
 		$topic = Topic::where('id', $id)->first();
 		$topic->delete();
 
-		return response()->json('Topic deleted successfully!', 200);
+		return $topic;
 	}
 }

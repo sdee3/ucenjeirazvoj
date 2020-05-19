@@ -10,7 +10,6 @@ import {
 import { AlertContext } from "../../app";
 import Page404 from "../404";
 
-const Category = lazy(() => import("../../components/Category"));
 const ReactQuill = lazy(() => import("react-quill"));
 
 export default function Edit({ match }) {
@@ -61,14 +60,6 @@ export default function Edit({ match }) {
     } else {
       setArticle({ ...article, content: value });
     }
-  };
-
-  const handleRadioChange = (e) => {
-    /* const newCategory = categoriesContext.categories.filter(
-      (c) => c.name === e.target.value
-    )[0];
-
-    setArticle({ ...article, category_id: newCategory.id }); */
   };
 
   const updateArticle = () => {

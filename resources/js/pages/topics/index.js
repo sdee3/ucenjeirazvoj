@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { isAuthenticated } from "../../Helpers";
 
 export default function Teme() {
   const [fetchedTopics, setFetchedTopics] = React.useState([]);
@@ -24,7 +25,14 @@ export default function Teme() {
 
   return (
     <section className='topics-page container'>
-      <h1>Teme</h1>
+      <div className='blog-page__top-heading'>
+        <h1>Teme</h1>
+        {isAuthenticated() ? (
+          <Link to='/teme/new'>
+            <button className='button'>Novi tekst</button>
+          </Link>
+        ) : null}
+      </div>
       <div className='topics-page__topics'>
         {fetchedTopics.length
           ? fetchedTopics.map((topic) => {
