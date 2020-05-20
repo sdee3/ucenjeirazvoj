@@ -11,7 +11,7 @@ class EmailController extends Controller
   public function submitContactForm(Request $request)
   {
     $request_data = $request->all();
-    Mail::to('aleksandar@autentikaglobal.com')->queue(new ContactMain($request_data));
+    Mail::to('info@ucenjeirazvoj.com')->queue(new ContactMain($request_data));
 
     return response('Your message has been sent successfully!', 200)
       ->header('Content-Type', 'text/plain');

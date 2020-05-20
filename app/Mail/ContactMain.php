@@ -38,7 +38,7 @@ class ContactMain extends Mailable
    */
   public function build()
   {
-    return $this->from('aleksandar@autentikaglobal.com')
+    return $this->from('info@ucenjeirazvoj.com')
       ->view('emails.emailMain')
       ->with([
         'name' => $this->form_data['name'],
