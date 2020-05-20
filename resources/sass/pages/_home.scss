@@ -4,9 +4,10 @@
   }
 
   &__main-img {
-    background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/e_brightness:-10/v1589613317/ucenjeirazvoj/hands-2847508_960_720.webp");
+    background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/v1589966037/ucenjeirazvoj/ucenjeirazvoj-main-txt.jpg");
     background-position: center;
-    background-size: cover;
+    background-color: #cae6f4;
+    background-size: contain;
     background-repeat: no-repeat;
     height: 50vh;
     margin: 0 auto;
@@ -52,23 +53,6 @@
     }
   }
 
-  &__questionnaire-promo {
-    background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/v1560004610/autentika/img2.jpg");
-    height: 30vh;
-
-    .container {
-      color: $text-white;
-      height: 100%;
-      padding-top: 2rem;
-      text-align: center;
-      width: 100%;
-
-      .button {
-        margin-top: 2rem;
-      }
-    }
-  }
-
   &__about-us {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -108,7 +92,7 @@
   }
 
   &__promo {
-    background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/v1560004610/autentika/img2.jpg");
+    background-color: $indigo;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
