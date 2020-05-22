@@ -37,7 +37,11 @@ export default function Teme() {
         {fetchedTopics.length
           ? fetchedTopics.map((topic) => {
               return (
-                <section className='topics-page__topics--topic' key={topic.id}>
+                <section
+                  id={`Tema${topic.id}`}
+                  className='topics-page__topics--topic'
+                  key={topic.id}
+                >
                   <h2>{topic.name}</h2>
                   {fetchSubTopicsByParentId(topic.id).map((subtopic) => {
                     return (

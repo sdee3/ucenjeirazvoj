@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 export default function Services() {
   return (
@@ -9,19 +9,19 @@ export default function Services() {
         <div className='services'>
           <Link
             className='topics-page__topics--topic topics-page__topics--topic-at-homepage'
-            to='/teme'
+            to='/teme#Tema1'
           >
             Deca i odrastanje
           </Link>
           <Link
             className='topics-page__topics--topic topics-page__topics--topic-at-homepage'
-            to='/teme'
+            to='/teme#Tema2'
           >
             Roditeljstvo
           </Link>
           <Link
             className='topics-page__topics--topic topics-page__topics--topic-at-homepage'
-            to='/teme'
+            to='/teme#Tema3'
           >
             Lični rast i lični razvoj
           </Link>
