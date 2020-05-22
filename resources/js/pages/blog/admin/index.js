@@ -7,12 +7,14 @@ export default function AdminLogin() {
   const [password, setPassword] = React.useState("");
 
   const login = () => {
+    let currentUrl = window.location.pathname;
+
     axios
       .post("/api/admin-login", { username, password })
       .then((res) => {
         createCookie("x-auth", res.headers["x-auth"]);
         alert("Uspešna autorizacija!");
-        history.back();
+        window.location.href = currentUrl.replace("/admin", "");
       })
       .catch((err) => {
         alert(err.response.data);
