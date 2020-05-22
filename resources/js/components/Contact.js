@@ -15,6 +15,7 @@ export default function Contact() {
             <h3>Informacije o nama</h3>
             <p>Učenje i razvoj</p>
             <div className='contact-sections__image' />
+            <p>063/177-42-67</p>
             <p>
               Email:{" "}
               <a href='mailto:info@ucenjeirazvoj.com'>info@ucenjeirazvoj.com</a>
