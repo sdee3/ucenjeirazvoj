@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link to='/'>Naslovna</Link>
           <Link to='/teme'>Teme</Link>
           <Link to='/podrska'>Podrška</Link>
-          {/* <Link to='/blog'>Blog</Link> */}
+          <Link to='/o-meni'>O Meni</Link>
           <Link to='/citati'>Citati</Link>
           <a href='#contact'>Kontakt</a>
         </section>

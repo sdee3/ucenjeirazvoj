@@ -39,6 +39,7 @@ const PodrskaRoditeljima = lazy(() =>
 const PodrskaOdraslima = lazy(() => import("./pages/support/PodrskaOdraslima"));
 
 const Quotes = lazy(() => import("./pages/quotes"));
+const About = lazy(() => import("./pages/about"));
 
 const Navbar = lazy(() => import("./components/Navbar"));
 const Contact = lazy(() => import("./components/Contact"));
@@ -56,11 +57,6 @@ const App = () => {
     axios
       .get("/api/categories")
       .then((res) => setCategories(res.data))
-      .catch((err) => console.error(err.response));
-
-    axios
-      .get("/api/topics")
-      .then((res) => setTopics(res.data))
       .catch((err) => console.error(err.response));
   }, []);
 
@@ -111,6 +107,7 @@ const App = () => {
                 component={PodrskaOdraslima}
               />
               <Route exact path='/citati' component={Quotes} />
+              <Route exact path='/o-meni' component={About} />
               {/* <Route exact path='/blog' component={Blog} />
               <Route exact path='/blog/admin' component={AdminLogin} />
               <Route exact path='/blog/new' component={AddArticle} />
