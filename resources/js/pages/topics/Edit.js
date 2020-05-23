@@ -33,33 +33,7 @@ export default function Edit({ match }) {
   }, []);
 
   const handleChange = (value) => {
-    if (value.indexOf("data:image") > 0) {
-      let valuesArray = value.split("</p>");
-
-      for (let i = 0; i < valuesArray.length; i++) {
-        if (valuesArray[i].indexOf("data:image") > 0) {
-          let imgStringArray =
-            valuesArray[i].split(`<p><img src="data:`) ||
-            valuesArray[i].split(`<img src="data:`);
-
-          if (imgStringArray[1]) {
-            const sanitizedImgData = imgStringArray[1].split(`">`)[0];
-
-            axios
-              .post("/api/upload", { data: sanitizedImgData })
-              .then((response) => {
-                valuesArray[i] = `<img src="/${response.data}" />`;
-                var output = valuesArray.join("</p>");
-
-                setArticle({ ...article, content: output });
-              })
-              .catch((err) => setAlert(err, "danger"));
-          }
-        }
-      }
-    } else {
-      setArticle({ ...article, content: value });
-    }
+    setArticle({ ...article, content: value });
   };
 
   const updateArticle = () => {
