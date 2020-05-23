@@ -10,7 +10,8 @@ const quillModules = {
       { indent: "-1" },
       { indent: "+1" },
     ],
-    ["link", "image"],
+    [{ align: [] }],
+    ["link"],
     ["clean"],
   ],
 };
@@ -25,8 +26,8 @@ const quillFormats = [
   "list",
   "bullet",
   "indent",
+  "align",
   "link",
-  "image",
 ];
 
 const createCookie = (cookieName, cookieValue, daysToExpire) => {
