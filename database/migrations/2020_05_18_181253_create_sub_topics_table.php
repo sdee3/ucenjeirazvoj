@@ -17,6 +17,7 @@ class CreateSubtopicsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('topic_id');
             $table->text('name');
+            $table->text('intro')->nullable();
             $table->longText('content');
             $table->text('slug');
             $table->timestamps();

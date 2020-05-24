@@ -70,6 +70,7 @@ export default function About() {
           obrasce možemo razviti a koji će nas dovesti do mirnijeg i
           ispunjenijeg života.
         </p>
+        <p>Marijana Petrović</p>
       </div>
     </section>
   );

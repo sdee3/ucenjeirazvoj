@@ -19,6 +19,7 @@ export default function AddTopic() {
     name: "",
     topic_id: 0,
     slug: "",
+    intro: "",
     content: "",
   });
   const [parentTopics, setParentTopics] = React.useState([]);
@@ -94,6 +95,11 @@ export default function AddTopic() {
             onChange={(e) => setTopic({ ...topic, name: e.target.value })}
             placeholder='Naslov'
             value={topic.name}
+          />
+          <input
+            onChange={(e) => setTopic({ ...topic, intro: e.target.value })}
+            placeholder='Podnaslov'
+            value={topic.intro}
           />
           <div className='input-group-prepend'>
             <div className='input-group-prepend__pre-input-text'>{`/tema/`}</div>

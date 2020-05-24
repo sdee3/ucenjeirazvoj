@@ -54,10 +54,10 @@ export default function Topic({ match }) {
           {isAuthenticated() ? (
             <div className='blog-post__top-buttons'>
               <Link to={`/tema/${match.params.slug}/edit`}>
-                <button className='button'>Edit</button>
+                <button className='button'>Izmeni tekst</button>
               </Link>
               <button className='button' onClick={deleteArticle}>
-                Delete Article
+                Obriši tekst
               </button>
             </div>
           ) : null}
@@ -66,6 +66,9 @@ export default function Topic({ match }) {
             <span className='article-author' />
             <span className='label'>{parentTopic}</span>
           </section>
+          {article.intro ? (
+            <section className='blog-post__intro'>{article.intro}</section>
+          ) : null}
           <section
             className='blog-post__text'
             dangerouslySetInnerHTML={{ __html: article.content }}

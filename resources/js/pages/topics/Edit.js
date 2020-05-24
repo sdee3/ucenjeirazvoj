@@ -72,14 +72,19 @@ export default function Edit({ match }) {
         </div>
         <input
           onChange={(e) => setArticle({ ...article, name: e.target.value })}
-          placeholder='Title'
+          placeholder='Naslov'
           value={article.name}
+        />
+        <input
+          onChange={(e) => setArticle({ ...article, intro: e.target.value })}
+          placeholder='Podnaslov'
+          value={article.intro}
         />
         <div className='input-group-prepend'>
           <div className='input-group-prepend__pre-input-text'>{`/tema/`}</div>
           <input
             onChange={(e) => setArticle({ ...article, slug: e.target.value })}
-            placeholder='Article URL (automatically starts with /tema/)'
+            placeholder='URL ka tekstu (automatski počinje sa /tema/)'
             value={article.slug}
           />
         </div>

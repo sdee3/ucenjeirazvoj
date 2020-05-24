@@ -4,6 +4,7 @@ const quillModules = {
   toolbar: [
     [{ header: [1, 2, false] }],
     ["bold", "italic", "underline", "strike", "blockquote"],
+    [{ color: [] }],
     [
       { list: "ordered" },
       { list: "bullet" },
@@ -23,6 +24,7 @@ const quillFormats = [
   "underline",
   "strike",
   "blockquote",
+  "color",
   "list",
   "bullet",
   "indent",

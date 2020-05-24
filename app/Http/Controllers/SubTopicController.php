@@ -23,6 +23,7 @@ class SubTopicController extends Controller
 			'name' => $request->name,
 			'topic_id' => $request->topic_id,
 			'slug' => $request->slug,
+			'intro' => $request->intro,
 			'content' => $request->content,
 		]);
 
@@ -51,6 +52,7 @@ class SubTopicController extends Controller
 			$subtopic->name = $request->name;
 			$subtopic->topic_id = $request->topic_id;
 			$subtopic->slug = $request->slug;
+			$subtopic->intro = $request->intro;
 			$subtopic->content = $request->content;
 			$subtopic->update();
 

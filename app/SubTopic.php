@@ -11,7 +11,7 @@ class SubTopic extends Model
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'topic_id', 'content', 'slug'];
+	protected $fillable = ['name', 'topic_id', 'intro', 'content', 'slug'];
 
 	/**
 	 * The attributes that should be hidden for arrays.
