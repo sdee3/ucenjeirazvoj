@@ -1,4 +1,5 @@
 import React, { lazy } from "react";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { isAuthenticated, validateCookie } from "../../Helpers";
@@ -40,6 +41,47 @@ export default function Topic({ match }) {
 
   return article ? (
     <>
+      <Helmet>
+        <title>{`${article.name} | Učenje i razvoj`}</title>
+        <meta
+          name='description'
+          content={
+            article.intro ? article.intro : `${article.title} | Učenje i razvoj`
+          }
+        />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://ucenjeirazvoj.com/' />
+        <meta
+          property='og:title'
+          content={`${article.name} | Učenje i razvoj`}
+        />
+        <meta
+          property='og:description'
+          content={
+            article.intro ? article.intro : `${article.title} | Učenje i razvoj`
+          }
+        />
+        <meta
+          property='og:image'
+          content='https://res.cloudinary.com/sdee3-com/image/upload/v1589966037/ucenjeirazvoj/ucenjeirazvoj-main-txt.jpg'
+        />
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://ucenjeirazvoj.com/' />
+        <meta
+          property='twitter:title'
+          content={`${article.name} | Učenje i razvoj`}
+        />
+        <meta
+          property='twitter:description'
+          content={
+            article.intro ? article.intro : `${article.title} | Učenje i razvoj`
+          }
+        />
+        <meta
+          property='twitter:image'
+          content='https://res.cloudinary.com/sdee3-com/image/upload/v1589966037/ucenjeirazvoj/ucenjeirazvoj-main-txt.jpg'
+        />
+      </Helmet>
       <Breadcrumbs
         page={
           <>
