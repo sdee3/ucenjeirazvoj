@@ -247,6 +247,20 @@
         object-fit: cover;
         width: 100%;
       }
+
+      .ql-align {
+        &-center {
+          text-align: center;
+        }
+
+        &-right {
+          text-align: right;
+        }
+
+        &-justify {
+          text-align: justify;
+        }
+      }
     }
 
     &__category {

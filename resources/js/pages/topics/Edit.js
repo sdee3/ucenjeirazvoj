@@ -41,7 +41,7 @@ export default function Edit({ match }) {
       .then(() =>
         axios.put(`/api/tema/${originalSlug}`, article).then(() => {
           setAlert(
-            "Article updated successfully! You will soon be redirected back to the article...",
+            "Tekst je uspešno ažuriran! Bićete vraćeni nazad za par sekundi...",
             "success"
           );
 
