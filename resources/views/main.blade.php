@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  <link rel='shortcut icon' type='image/x-icon' href="{{ asset('favicon.ico') }}" />
   <title>Učenje i razvoj</title>
 
   @if (env('APP_ENV') === 'production')
