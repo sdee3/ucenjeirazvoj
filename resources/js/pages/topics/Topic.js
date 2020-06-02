@@ -61,10 +61,7 @@ export default function Topic({ match }) {
             article.intro ? article.intro : `${article.title} | Učenje i razvoj`
           }
         />
-        <meta
-          property='og:image'
-          content='https://res.cloudinary.com/sdee3-com/image/upload/v1589966037/ucenjeirazvoj/ucenjeirazvoj-main-txt.jpg'
-        />
+        <meta property='og:image' content={article.img_url} />
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content='https://ucenjeirazvoj.com/' />
         <meta
@@ -77,10 +74,7 @@ export default function Topic({ match }) {
             article.intro ? article.intro : `${article.title} | Učenje i razvoj`
           }
         />
-        <meta
-          property='twitter:image'
-          content='https://res.cloudinary.com/sdee3-com/image/upload/v1589966037/ucenjeirazvoj/ucenjeirazvoj-main-txt.jpg'
-        />
+        <meta property='twitter:image' content={article.img_url} />
       </Helmet>
       <Breadcrumbs
         page={
@@ -110,6 +104,11 @@ export default function Topic({ match }) {
           </section>
           {article.intro ? (
             <section className='blog-post__intro'>{article.intro}</section>
+          ) : null}
+          {article.img_url ? (
+            <div className='blog-post__cover-img'>
+              <img alt={article.name} src={article.img_url} />
+            </div>
           ) : null}
           <section
             className='blog-post__text'

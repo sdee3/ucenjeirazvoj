@@ -101,6 +101,11 @@ export default function AddTopic() {
             placeholder='Podnaslov'
             value={topic.intro}
           />
+          <input
+            onChange={(e) => setTopic({ ...topic, img_url: e.target.value })}
+            placeholder='URL ka slici'
+            value={topic.img_url}
+          />
           <div className='input-group-prepend'>
             <div className='input-group-prepend__pre-input-text'>{`/tema/`}</div>
             <input

@@ -61,14 +61,14 @@ export default function Edit({ match }) {
       <h1 className='h1-small'>You are editing {originalTitle}:</h1>
       <section className='edit-article__inputs'>
         <div className='edit-article__inputs--category-select'>
-          <span>Category:</span>
+          {/* <span>Category:</span>
           <section className='edit-article__category-checkboxes'>
-            {/* <Category
+            <Category
               categories={categoriesContext.categories}
               category_id={article.category_id}
               handleRadioChange={handleRadioChange}
-            /> */}
-          </section>
+            />
+          </section> */}
         </div>
         <input
           onChange={(e) => setArticle({ ...article, name: e.target.value })}
@@ -79,6 +79,11 @@ export default function Edit({ match }) {
           onChange={(e) => setArticle({ ...article, intro: e.target.value })}
           placeholder='Podnaslov'
           value={article.intro}
+        />
+        <input
+          onChange={(e) => setArticle({ ...article, img_url: e.target.value })}
+          placeholder='URL ka slici'
+          value={article.img_url}
         />
         <div className='input-group-prepend'>
           <div className='input-group-prepend__pre-input-text'>{`/tema/`}</div>

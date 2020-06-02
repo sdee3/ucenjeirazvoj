@@ -1,6 +1,6 @@
 .blog-page {
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 
   &__top-heading {
     display: flex;
@@ -229,8 +229,10 @@
     }
 
     &__cover-img {
-      max-height: 30vh;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
       object-fit: cover;
+      text-align: center;
     }
 
     &__link {
@@ -331,6 +333,7 @@
 
   &__login-form {
     margin-top: 2rem;
+    margin-bottom: 10rem;
 
     form {
       display: flex;

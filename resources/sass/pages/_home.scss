@@ -1,4 +1,6 @@
 .home-page {
+  overflow-x: hidden;
+
   h2 {
     font-size: 1.75rem;
   }
@@ -44,11 +46,29 @@
   }
 
   &__services {
+    background: $light-pink;
     border-bottom: 4px solid $indigo;
     border-top: 4px solid $indigo;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 10rem;
+    position: relative;
     text-align: center;
+
+    &:before {
+      background: $light-pink;
+      content: "";
+      position: absolute;
+      z-index: 10;
+      top: -87px;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      transform: rotateZ(-2deg);
+      -o-transform: rotateZ(-2deg);
+      -moz-transform: rotateZ(-2deg);
+      -webkit-transform: rotateZ(-2deg);
+      -ms-transform: rotateZ(-2deg);
+    }
 
     .container {
       color: $text-default !important;
@@ -90,19 +110,6 @@
       border-bottom: 4px solid $text-white;
       margin-top: 2rem;
       margin-bottom: 2rem;
-      width: 100%;
-    }
-  }
-
-  &__clients {
-    background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/v1560004656/autentika/img11.jpg");
-    height: 30vh;
-
-    .container {
-      color: $text-white;
-      height: 100%;
-      padding-top: 2rem;
-      text-align: center;
       width: 100%;
     }
   }

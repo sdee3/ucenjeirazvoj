@@ -25,6 +25,7 @@ class SubTopicController extends Controller
 			'slug' => $request->slug,
 			'intro' => $request->intro,
 			'content' => $request->content,
+			'img_url' => $request->img_url,
 		]);
 
 		return response()->json('SubTopic created successfully!', 201);
@@ -54,6 +55,7 @@ class SubTopicController extends Controller
 			$subtopic->slug = $request->slug;
 			$subtopic->intro = $request->intro;
 			$subtopic->content = $request->content;
+			$subtopic->img_url = $request->img_url;
 			$subtopic->update();
 
 			return response()->json('SubTopic updated successfully!', 200);

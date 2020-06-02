@@ -1,6 +1,24 @@
 .contact {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  background: $light-blue;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: -87px;
+    left: -10%;
+    width: 120%;
+    height: 120px;
+    transform: rotateZ(2deg);
+    -o-transform: rotateZ(2deg);
+    -moz-transform: rotateZ(2deg);
+    -webkit-transform: rotateZ(2deg);
+    -ms-transform: rotateZ(2deg);
+    background: $light-blue;
+  }
 
   .container {
     width: 100%;
