@@ -46,7 +46,7 @@
           display: block;
           width: 25px;
           height: 10px;
-          border-top: 2px solid $border-grey;
+          border-top: 2px solid $text-default;
         }
       }
     }
@@ -71,7 +71,7 @@
       position: absolute;
       display: block;
       width: 100%;
-      background-color: rgba($black, 0.8);
+      background-color: $light-blue;
       height: 0px;
       transition: height 0.15s ease-in;
       overflow-y: hidden;
@@ -100,9 +100,22 @@
 
   .home-page {
     &__promo {
+      &-text {
+        top: 0;
+        left: 1rem;
+
+        h3 {
+          font-size: 1rem;
+        }
+      }
+
       .container {
         padding-top: 0.5rem;
       }
+    }
+
+    &__services {
+      padding-bottom: 3rem;
     }
 
     &__main-img {
@@ -166,5 +179,13 @@
 
   .support-page {
     background-position: 20% 40%;
+  }
+
+  .topics-page {
+    &__topics {
+      &--subtopics {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 }

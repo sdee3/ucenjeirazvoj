@@ -32,13 +32,14 @@
       column-gap: 1rem;
 
       &-toggle-all {
-        border: 1px solid;
+        border: 1px solid $light-blue;
         border-radius: 4px;
         cursor: pointer;
         display: flex;
         justify-content: center;
 
         i {
+          color: lighten($light-blue, 2);
           font-size: 3rem;
         }
       }

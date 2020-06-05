@@ -1,7 +1,10 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const isMobile = useMediaQuery({ query: "(max-width: 769px)" });
+
   return (
     <section className='navbar'>
       <div className='container'>
@@ -29,6 +32,12 @@ export default function Navbar() {
           </label>
         </section>
         <section className='navbar__links navbar__links--right'>
+          {isMobile ? (
+            <>
+              <Link to='/teme'>Teme</Link>
+              <Link to='/podrska'>Podrška</Link>
+            </>
+          ) : null}
           <Link to='/o-meni'>O Meni</Link>
           <Link to='/citati'>Citati</Link>
           <a href='#contact'>Kontakt</a>
