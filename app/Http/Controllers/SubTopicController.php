@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\SubTopic;
+use App\Topic;
 use Validator;
 
 class SubTopicController extends Controller
@@ -15,6 +16,24 @@ class SubTopicController extends Controller
 		} else {
 			return SubTopic::where('slug', $slug)->with('topic')->first();
 		}
+	}
+
+	public function fetchLatest()
+	{
+		$subtopics = [];
+		$topics = Topic::all();
+
+		foreach ($topics as $topic) {
+			array_push(
+				$subtopics,
+				SubTopic::orderBy('id', 'desc')
+					->where('topic_id', $topic->id)
+					->with('topic')
+					->take(3)->get()
+			);
+		}
+
+		return $subtopics;
 	}
 
 	public function submit(Request $request)

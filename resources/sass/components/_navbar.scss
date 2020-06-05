@@ -1,7 +1,7 @@
 .navbar {
-  background-color: $indigo;
+  background-color: $light-blue;
   display: flex;
-  height: 60px;
+  height: 150px;
   position: relative;
 
   .container {
@@ -23,7 +23,7 @@
 
   &__brand {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
 
@@ -36,11 +36,11 @@
     }
 
     img {
-      height: 40px;
+      height: 150px;
     }
 
     p {
-      color: $text-white;
+      color: $text-default;
       display: flex;
       align-items: center;
       font-size: 1.4rem;
@@ -54,7 +54,7 @@
   &__links {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
 
     a,
@@ -63,7 +63,7 @@
     }
 
     a {
-      color: $text-white;
+      color: $text-default;
       font-weight: bold;
       text-decoration: none;
       text-transform: uppercase;

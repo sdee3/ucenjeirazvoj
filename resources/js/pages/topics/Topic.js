@@ -99,8 +99,8 @@ export default function Topic({ match }) {
           ) : null}
           <h1 className='blog-post__title'>{article.name}</h1>
           <section className='blog-post__author-category'>
-            <span className='article-author' />
             <span className='label'>{parentTopic}</span>
+            <span className='article-author' />
           </section>
           {article.intro ? (
             <section className='blog-post__intro'>{article.intro}</section>

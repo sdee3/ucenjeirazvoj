@@ -2,6 +2,7 @@ import React, { lazy } from "react";
 import { Helmet } from "react-helmet";
 
 const Services = lazy(() => import("./Services"));
+const Promo = lazy(() => import("./Promo"));
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
           </div>
         </section>
         <Services />
+        <Promo />
       </section>
     </>
   );

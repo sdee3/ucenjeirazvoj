@@ -74,17 +74,23 @@ export default function Teme() {
                     key={topic.id}
                   >
                     <h2>{topic.name}</h2>
-                    {fetchSubTopicsByParentId(topic.id).map((subtopic) => {
-                      return (
-                        <Link
-                          className='topics-page__topics--subtopic'
-                          key={subtopic.id}
-                          to={`/tema/${subtopic.slug}`}
-                        >
-                          {subtopic.name}
-                        </Link>
-                      );
-                    })}
+                    <div className='topics-page__topics--subtopics'>
+                      {fetchSubTopicsByParentId(topic.id).map((subtopic) => {
+                        return (
+                          <Link key={subtopic.id} to={`/tema/${subtopic.slug}`}>
+                            <div className='topics-page__topics--subtopic'>
+                              {subtopic.img_url ? (
+                                <img
+                                  src={subtopic.img_url}
+                                  alt={subtopic.name}
+                                />
+                              ) : null}
+                              <h3>{subtopic.name}</h3>
+                            </div>
+                          </Link>
+                        );
+                      })}
+                    </div>
                   </section>
                 );
               })

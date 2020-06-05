@@ -29,6 +29,7 @@ Route::put('/topics', 'TopicController@update');
 Route::delete('/topics/{id}', 'TopicController@delete');
 
 Route::get('/subtopics', 'SubTopicController@fetch');
+Route::get('/subtopics/latest', 'SubTopicController@fetchLatest');
 Route::get('/tema/{slug}', 'SubTopicController@fetch');
 Route::post('/subtopics', 'SubTopicController@submit');
 Route::put('/tema/{slug}', 'SubTopicController@update');
