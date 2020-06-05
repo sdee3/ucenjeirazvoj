@@ -20,10 +20,6 @@ import axios from "axios";
 const Alert = lazy(() => import("./components/Alert"));
 const Home = lazy(() => import("./pages/home"));
 const AdminLogin = lazy(() => import("./pages/blog/admin"));
-/* const Article = lazy(() => import("./pages/blog/Article"));
-const AddArticle = lazy(() => import("./pages/blog/AddArticle"));
-const Blog = lazy(() => import("./pages/blog"));
-const Edit = lazy(() => import("./pages/blog/Edit")); */
 const Page404 = lazy(() => import("./pages/404"));
 
 const Topics = lazy(() => import("./pages/topics"));
@@ -108,11 +104,6 @@ const App = () => {
               />
               <Route exact path='/citati' component={Quotes} />
               <Route exact path='/o-meni' component={About} />
-              {/* <Route exact path='/blog' component={Blog} />
-              <Route exact path='/blog/admin' component={AdminLogin} />
-              <Route exact path='/blog/new' component={AddArticle} />
-              <Route exact path='/blog/:slug' component={Article} />
-              <Route exact path='/blog/:slug/edit' component={Edit} /> */}
             </CategoriesContext.Provider>
             <Route component={Page404} />
           </Switch>
