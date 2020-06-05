@@ -12,7 +12,7 @@ class SubTopicController extends Controller
 	public function fetch(string $slug = null)
 	{
 		if (!$slug) {
-			return SubTopic::with('topic')->get();
+			return SubTopic::orderBy('id', 'desc')->with('topic')->get();
 		} else {
 			return SubTopic::where('slug', $slug)->with('topic')->first();
 		}
