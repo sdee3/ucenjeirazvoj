@@ -7,9 +7,26 @@ import { isAuthenticated } from "../../Helpers";
 export default function Teme() {
   const [fetchedTopics, setFetchedTopics] = React.useState([]);
   const [fetchedSubTopics, setFetchedSubTopics] = React.useState([]);
+  const [latestFetchedSubTopics, setLatestFetchedSubTopics] = React.useState(
+    []
+  );
+
+  const [allSubtopicsToggled, setAllSubtopicsToggled] = React.useState(false);
 
   const fetchSubTopicsByParentId = (id) => {
     return fetchedSubTopics.filter((subtopic) => subtopic.topic_id == id);
+  };
+
+  const fetchLatestSubTopicsByTopic = (id) => {
+    let result = [];
+
+    for (let i = 0; i < latestFetchedSubTopics.length; i++) {
+      latestFetchedSubTopics[i].forEach((subtopic) => {
+        if (subtopic.topic_id === id) result.push(subtopic);
+      });
+    }
+
+    return result;
   };
 
   React.useEffect(() => {
@@ -21,6 +38,11 @@ export default function Teme() {
     axios
       .get("/api/subtopics")
       .then((res) => setFetchedSubTopics(res.data))
+      .catch((err) => console.error(err.response));
+
+    axios
+      .get("/api/subtopics/latest")
+      .then((res) => setLatestFetchedSubTopics(res.data))
       .catch((err) => console.error(err.response));
   }, []);
 
@@ -65,11 +87,57 @@ export default function Teme() {
           ) : null}
         </div>
         <div className='topics-page__topics'>
-          {fetchedTopics.length
+          {!allSubtopicsToggled
+            ? fetchedTopics.length
+              ? fetchedTopics.map((topic) => {
+                  return (
+                    <section
+                      className='topics-page__topics--topic'
+                      key={topic.id}
+                    >
+                      <h2>{topic.name}</h2>
+                      <div className='topics-page__topics--subtopics'>
+                        {fetchLatestSubTopicsByTopic(topic.id).map(
+                          (subtopic) => {
+                            return (
+                              <Link
+                                key={subtopic.id}
+                                to={`/tema/${subtopic.slug}`}
+                              >
+                                <div className='topics-page__topics--subtopic'>
+                                  {subtopic.img_url ? (
+                                    <img
+                                      src={subtopic.img_url}
+                                      alt={`${subtopic.name} | Učenje i razvoj`}
+                                    />
+                                  ) : null}
+                                  <p>{subtopic.name}</p>
+                                </div>
+                              </Link>
+                            );
+                          }
+                        )}
+                      </div>
+                      <div
+                        className='topics-page__topics--subtopics-toggle-all'
+                        onClick={() =>
+                          setAllSubtopicsToggled(!allSubtopicsToggled)
+                        }
+                      >
+                        {allSubtopicsToggled ? (
+                          <i className='fas fa-caret-up'></i>
+                        ) : (
+                          <i className='fas fa-caret-down'></i>
+                        )}
+                      </div>
+                    </section>
+                  );
+                })
+              : null
+            : fetchedTopics.length
             ? fetchedTopics.map((topic) => {
                 return (
                   <section
-                    id={`Tema${topic.id}`}
                     className='topics-page__topics--topic'
                     key={topic.id}
                   >
@@ -82,7 +150,7 @@ export default function Teme() {
                               {subtopic.img_url ? (
                                 <img
                                   src={subtopic.img_url}
-                                  alt={subtopic.name}
+                                  alt={`${subtopic.name} | Učenje i razvoj`}
                                 />
                               ) : null}
                               <h3>{subtopic.name}</h3>
@@ -90,6 +158,18 @@ export default function Teme() {
                           </Link>
                         );
                       })}
+                    </div>
+                    <div
+                      className='topics-page__topics--subtopics-toggle-all'
+                      onClick={() =>
+                        setAllSubtopicsToggled(!allSubtopicsToggled)
+                      }
+                    >
+                      {allSubtopicsToggled ? (
+                        <i className='fas fa-caret-up'></i>
+                      ) : (
+                        <i className='fas fa-caret-down'></i>
+                      )}
                     </div>
                   </section>
                 );

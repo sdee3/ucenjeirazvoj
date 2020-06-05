@@ -27,9 +27,19 @@
     }
 
     &--subtopics {
+      cursor: pointer;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 1rem;
+
+      &-toggle-all {
+        display: flex;
+        justify-content: center;
+
+        i {
+          font-size: 3rem;
+        }
+      }
     }
 
     a {
