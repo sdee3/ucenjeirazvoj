@@ -75,7 +75,7 @@
     .services {
       &__topics {
         &--topic {
-          border: 2px solid $text-default;
+          border: 2px solid $light-blue;
           border-radius: 4px;
           color: $text-default;
           display: block;
@@ -138,6 +138,7 @@
       position: relative;
 
       img {
+        max-height: 45vh;
         object-fit: cover;
         width: 100%;
       }
