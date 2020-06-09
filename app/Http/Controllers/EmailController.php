@@ -13,7 +13,7 @@ class EmailController extends Controller
     $request_data = $request->all();
     Mail::to('info@ucenjeirazvoj.com')->queue(new ContactMain($request_data));
 
-    return response('Your message has been sent successfully!', 200)
+    return response('Vaša poruka je uspešno poslata!', 200)
       ->header('Content-Type', 'text/plain');
   }
 }

@@ -3,11 +3,11 @@ import React from "react";
 export default function About() {
   return (
     <section className='about-page'>
-      <div className='container'>
+      <div className='container about-page__text'>
         <h1>O meni</h1>
         <p>
           Na ovom sajtu možete se upoznati sa onim čime se profesionalno bavim u
-          okviru psihoterapijkog i savetodavnog rada vezanog za lični rast i
+          okviru psihoterapijskog i savetodavnog rada vezanog za lični rast i
           razvoj.
         </p>
         <p>
@@ -20,6 +20,9 @@ export default function About() {
           sigurniji u sebe, sposobniji za bliskost, ljubav, uspešniji su u
           učenju i obavljanju profesionalne delatnosti, žive kvalitetnije.
         </p>
+        <br />
+        <img alt="Učenje i razvoj - O nama" src="https://res.cloudinary.com/sdee3-com/image/upload/v1591338167/ucenjeirazvoj/ucenje-i-razvoj-logo.png" />
+        <br />
         <p>
           Kada se dete uključi u proces psihoterapijskog savetovanja, pristup u
           radu sa njim je kreativan i nenametljiv, uz neophodno poverenje u
@@ -70,7 +73,7 @@ export default function About() {
           obrasce možemo razviti a koji će nas dovesti do mirnijeg i
           ispunjenijeg života.
         </p>
-        <p>Marijana Petrović</p>
+        <p className="text-right">Marijana Petrović, psihoterapijski savetnik</p>
       </div>
     </section>
   );

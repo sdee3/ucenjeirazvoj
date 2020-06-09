@@ -15,7 +15,7 @@ export default function Contact() {
             <h3>Informacije o nama</h3>
             <div className='contact-sections__image' />
             <p>Kontakt telefon:</p>
-            <p>063/177-42-67 - Marijana Petrović</p>
+            <p>063/177-42-67 - Marijana Petrović, psihoterapijski savetnik</p>
             <p>
               Email:{" "}
               <a href='mailto:info@ucenjeirazvoj.com'>info@ucenjeirazvoj.com</a>
