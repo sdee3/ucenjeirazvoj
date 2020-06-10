@@ -5,9 +5,6 @@
  */
 
 require("./bootstrap");
-import {Helmet} from 'react-helmet';
-
-const helmet = Helmet.renderStatic();
 
 /**
  * Next, we will create a fresh React component instance and attach it to
