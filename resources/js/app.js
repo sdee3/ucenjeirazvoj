@@ -5,6 +5,9 @@
  */
 
 require("./bootstrap");
+import {Helmet} from 'react-helmet';
+
+const helmet = Helmet.renderStatic();
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -104,8 +107,8 @@ const App = () => {
               />
               <Route exact path='/citati' component={Quotes} />
               <Route exact path='/o-meni' component={About} />
+              <Route component={Page404} />
             </CategoriesContext.Provider>
-            <Route component={Page404} />
           </Switch>
           <Contact />
           <Footer />
