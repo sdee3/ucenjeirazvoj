@@ -38,6 +38,7 @@
     gtag('config', 'UA-167145610-1');
   </script>
   @endif
+
 </head>
 
 <body>
@@ -47,16 +48,16 @@
     <a href="{{ url('/home') }}">Home</a>
     @else
     <a href="{{ route('login') }}">Login</a>
-
+    
     @if (Route::has('register'))
     <a href="{{ route('register') }}">Register</a>
     @endif
     @endauth
   </div>
   @endif
-
+  
   <div id="app"></div>
-
+  
   <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
