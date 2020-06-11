@@ -13,7 +13,13 @@ require("./bootstrap");
  */
 
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router-dom";
+import { render } from "react-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  withRouter,
+} from "react-router-dom";
 import axios from "axios";
 
 const Alert = lazy(() => import("./components/Alert"));
@@ -116,3 +122,5 @@ const App = () => {
 
 export default withRouter(App);
 export { AlertContext, CategoriesContext };
+
+render(<App />, document.getElementById("app"));

@@ -119,11 +119,15 @@
     }
 
     &__main-img {
-      background-position: 80% 20%;
+      background-position: 100% 20%;
       height: 50vh;
       margin-bottom: 3rem;
 
       .container {
+        h1 {
+          display: none;
+        }
+
         .heading {
           .image-section {
             display: flex;
