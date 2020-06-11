@@ -6,11 +6,11 @@
   }
 
   &__main-img {
-    background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/v1591863988/ucenjeirazvoj/ucenje-i-razvoj-promo.png");
-    background-position: center 20%;
+    background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/v1591865580/ucenjeirazvoj/ucenje-i-razvoj-promo.png");
+    background-position: center -20px;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 50vh;
+    height: 60vh;
     margin: 0 auto;
 
     .container {
@@ -22,7 +22,7 @@
       text-align: center;
 
       h1 {
-        color: $text-default;
+        color: $text-white;
         font-size: 2.5rem;
       }
     }
