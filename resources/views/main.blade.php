@@ -38,8 +38,6 @@
     gtag('config', 'UA-167145610-1');
   </script>
   @endif
-
-  <script defer src="{{ mix('js/app-client.js') }}"></script>
 </head>
 
 <body>
@@ -57,11 +55,9 @@
   </div>
   @endif
 
-  {!! ssr('js/react/entry-server.js')
-    // Share the packages with the server script through context
-    // If ssr fails, we need a container to render the app client-side
-    ->fallback('<div id="app"></div>')
-    ->render() !!}
+  <div id="app"></div>
+
+  <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>
