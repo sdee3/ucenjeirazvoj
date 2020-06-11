@@ -15,6 +15,8 @@ mix.disableNotifications();
 
 mix
 	.react('resources/js/app.js', 'public/js')
+	.react('resources/js/app-client.js', 'public/js')
+	.react('resources/js/app-server.js', 'public/js')
 	.sass('resources/sass/app.scss', 'public/css')
 	.babelConfig({
 		presets: ['@babel/preset-env'],

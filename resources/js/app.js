@@ -13,8 +13,7 @@ require("./bootstrap");
  */
 
 import React, { lazy, Suspense } from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router-dom";
 import axios from "axios";
 
 const Alert = lazy(() => import("./components/Alert"));
@@ -115,8 +114,5 @@ const App = () => {
   );
 };
 
-if (document.getElementById("app")) {
-  ReactDOM.render(<App />, document.getElementById("app"));
-}
-
+export default withRouter(App);
 export { AlertContext, CategoriesContext };
