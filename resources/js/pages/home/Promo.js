@@ -18,36 +18,48 @@ export default function Promo() {
       </div>
       <div className='container'>
         <p>
-          Nezavisno iz kog razloga bi <strong>dete</strong> bilo uključeno u
-          proces psihoterapijskog savetovanja, pristup u radu sa njim je
-          kreativan i nenametljiv, uz neophodno poverenje u njegove kapacitete i
-          potencijale. Kognitivne tehnike u tretmanu dece i mladih, polaze od
-          pretpostavke da je ponašanje uslovljeno načinom na koji interpretiramo
-          situacije ili događaje, načinom na koji mislimo. U tom smislu,
-          reakcije i ponašanja su rezultat naučenih obrazaca mišljenja. To
-          istovremeno znači da je disfunkcionalne obrasce ponašanja moguće
-          menjati, odnosno učiti nove. Stoga različitim tehnikama na
-          strukturisan i pristupačan način učimo dete novim principima mišljenja
-          koja će odrediti njegove buduće emocionalne reakcije i ponašanje.
+          Glavni cilj rada sa decom, bez obzira na simptome, je pomoći detetu da
+          proradi emocije ili zadovolji potrebe koje mu onemogućuju optimalan
+          psihosocijalni razvoj, razvoj pozitivne slike o sebi i razvoj
+          strategija suočavanja i rešavanja problema. Paralelno se radi sa
+          roditeljima, na jačanju njihovih roditeljskih veština kroz
+          psihoedukativni i savetodavni rad. U radu sa decom kombinuju se
+          različite tehnike rada prilagođene razvojnim karakteristikama uzrasta
+          deteta, individualno ili kroz tematske radionice razvoja određenih
+          funkcionalnih veština. Najčešći problemi sa kojima se deca suočavaju
+          su stidljivost, nedostatak samopouzdanja, prolazak kroz težak
+          period života i određena traumatska iskustva, različiti strahovi,
+          plačljivost, utučenost, slabu koncentraciju, probleme u učenju,
+          agresivno ponašanje, nesigurnost, bes...
         </p>
         <p>
-          Savetovanje <strong>roditelja</strong> stavlja akcenat na probleme
-          vezane za vaspitanje, učenje i roditeljstvo. Cilj savetovanja je
-          unapređivanje roditeljskih veština. Savetovanje se može obavljati sa
-          jednim ili sa oba roditelja. Roditelji na ovaj način mogu razrešiti
-          dileme u vezi vaspitanja, steći znanja i uvide gde eventualno greše u
-          tom procesu.
+          Rad sa roditeljima usmeren je na pedagošku i psihološku edukaciju o
+          tome kako bolje razumeti određena dečija ponašanja, zašto se javljaju
+          i šta oni mogu uraditi kako bi olakšali svakodnevno funkcionisanje
+          porodice. Cilj je da roditelji steknu svest o postupanju prema
+          detetu koje ne daju željene rezultate i kako da ih zamene novim i
+          efikasnijim vaspitnim postupcima. Važno je da sagledaju situaciju iz
+          različitih perspektiva i uvide značenje koje ona ima za dete,
+          roditelja i odnos dete-roditelj. Deca predškolskog, školskog i
+          srednješkolskog uzrasta prolaze kroz različite faze razvoja a ključno
+          je razumeti psihološku podlogu njihovog ponašanja i adekvatno
+          odgovoriti u interesu cele porodice.
         </p>
         <p>
-          <strong>Odrasli</strong> se uz pomoć savetovanja I psihoterapije mogu
-          osloboditi emocionalnih problema, disfunkcionalnih ponašanja i
-          iracionalnog načina razmišljanja. Svrha savetodavno terapijskog rada
-          je da učimo kako da kvalitetnije živimo i budemo uspešniji u
-          obavljanju svojih uloga. Kao rezultat pravovremeno sprovedenih
-          psihoterapijskih postupaka kroz savetodavni rad, omogućiće nam da
-          postanemo srećniji i zadovoljniji, sigurniji u sebe, sposobniji za
-          bliskost, ljubav, uspešniji su u učenju i obavljanju profesionalne
-          delatnosti, žive kvalitetnije.
+          Glavni ciljevi rada sa odraslima su oslobađanje od emocionalnih
+          problema, disfunkcionalnih ponašanja i iracionalnog načina
+          razmišljanja. Kroz terapijski rad moguće je bolje upoznati sebe i
+          svoje obrasce ponašanja, razmišljanja i osećanja, prepoznati obrasce
+          ponašanja koji nisu korisni i zameniti ih onim koji vode do
+          zadovoljnijeg i ispunjenijeg života. Postizanjem uvida o udelu
+          sopstvene odgovornosti za održavanje različitih disfunkcionalnih
+          stanja, preko promene svog sistema uverenja, klijenti dolaze do uvida
+          da postoji određena sloboda izbora u svakom ponašanju. Moguće je
+          uspešno rešiti praktične ali i probleme iz različitog spektra
+          depresije, anksioznosti, paničnog poremećaja, postati sigurniji u
+          sebe, sposobniji za bliskost, ljubav, uspešniji u profesionalnom
+          funkcionisanju i osposobljeniji za samostalno rešavanje konkretnih
+          problema.
         </p>
       </div>
     </section>
