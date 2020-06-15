@@ -11,6 +11,6 @@
 |
 */
 
-Route::fallback(function () {
+Route::get('{url?}', function() {
     return view('main');
 });

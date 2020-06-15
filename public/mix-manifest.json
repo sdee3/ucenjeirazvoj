@@ -1,6 +1,6 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/js/app-client.js": "/js/app-client.js",
-    "/js/app-server.js": "/js/app-server.js"
+    "/js/app-client.js": "/js/app-client.js?id=4b5c78aa66047b2f0ee3",
+    "/js/app-server.js": "/js/app-server.js?id=a674ceeee9392efb1821",
+    "/js/loadStyles.css": "/js/loadStyles.css?id=29179520e53e3cfd3283",
+    "/js/loadStyles.js": "/js/loadStyles.js?id=12732707aac8468382aa"
 }
