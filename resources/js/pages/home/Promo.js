@@ -24,26 +24,26 @@ export default function Promo() {
           sebi i razvoj strategija suočavanja i rešavanja problema. Paralelno se
           radi sa roditeljima, na jačanju njihovih roditeljskih veština kroz
           psihoedukativni i savetodavni rad. U radu sa decom kombinuju se
-          različite tehnike rada prilagođene razvojnim karakteristikama uzrasta
+          različite tehnike prilagođene razvojnim karakteristikama uzrasta
           deteta, individualno ili kroz tematske radionice razvoja određenih
-          funkcionalnih veština. Najčešći problemi sa kojima se deca suočavaju
-          su stidljivost, nedostatak samopouzdanja, prolazak kroz težak period
-          života i određena traumatska iskustva, različiti strahovi,
-          plačljivost, utučenost, slabu koncentraciju, probleme u učenju,
-          agresivno ponašanje, nesigurnost, bes...
+          funkcionalnih veština. Najčeči problemi sa kojima se deca suočavaju
+          odnose se stidljivost, nedostatak samopouzdanja i samopoštovanja,
+          prolazak kroz težak period života i određena traumatska iskustva,
+          različiti strahovi, plačljivost, utučenost, slaba koncentracija,
+          probleme u učenju, agresivno ponašanje, nesigurnost, bes...
         </p>
         <p>
           Rad sa <strong>roditeljima</strong> usmeren je na pedagošku i
           psihološku edukaciju o tome kako bolje razumeti određena dečija
-          ponašanja, zašto se javljaju i šta oni mogu uraditi kako bi olakšali
-          svakodnevno funkcionisanje porodice. Cilj je da roditelji steknu svest
-          o postupanju prema detetu koje ne daju željene rezultate i kako da ih
-          zamene novim i efikasnijim vaspitnim postupcima. Važno je da sagledaju
-          situaciju iz različitih perspektiva i uvide značenje koje ona ima za
-          dete, roditelja i odnos dete-roditelj. Deca predškolskog, školskog i
-          srednješkolskog uzrasta prolaze kroz različite faze razvoja a ključno
-          je razumeti psihološku podlogu njihovog ponašanja i adekvatno
-          odgovoriti u interesu cele porodice.
+          ponašanja, zašto se javljaju i šta oni, kao roditelji, mogu uraditi
+          kako bi olakšali svakodnevno funkcionisanje porodice. Cilj je da
+          roditelji osveste koji postupci, od onih koje primenjuju, ne daju
+          željene rezultate i kako ih zameniti novim i efikasnijim. Važno je da
+          sagledaju situaciju iz različitih perspektiva i uvide značenje koje
+          ona ima za dete, roditelja i odnos dete-roditelj. Deca predškolskog,
+          školskog i srednješkolskog uzrasta prolaze kroz različite faze razvoja
+          a ključno je razumeti psihološku podlogu njihovog ponašanja i
+          adekvatno na nju odgovoriti u interesu cele porodice.
         </p>
         <p>
           Glavni ciljevi rada sa <strong>odraslima</strong> su oslobađanje od
@@ -53,13 +53,13 @@ export default function Promo() {
           ponašanja koji nisu korisni i zameniti ih onim koji vode do
           zadovoljnijeg i ispunjenijeg života. Postizanjem uvida o udelu
           sopstvene odgovornosti za održavanje različitih disfunkcionalnih
-          stanja, preko promene svog sistema uverenja, klijenti dolaze do uvida
-          da postoji određena sloboda izbora u svakom ponašanju. Moguće je
-          uspešno rešiti praktične ali i probleme iz različitog spektra
-          depresije, anksioznosti, paničnog poremećaja, postati sigurniji u
-          sebe, sposobniji za bliskost, ljubav, uspešniji u profesionalnom
-          funkcionisanju i osposobljeniji za samostalno rešavanje konkretnih
-          problema.
+          stanja, preko promene svog sistema uverenja, klijenti dolaze do
+          razumevanja principa da postoji određena sloboda izbora u svakom
+          ponašanju. Moguće je uspešno rešiti praktične ali i probleme iz
+          različitog spektra anksioznosti, promene raspoloženja, paničnih napada
+          ali i postati sigurniji u sebe, sposobniji za bliskost, ljubav,
+          uspešniji u profesionalnom funkcionisanju i osposobljeniji za
+          samostalno rešavanje konkretnih problema.
         </p>
       </div>
     </section>
