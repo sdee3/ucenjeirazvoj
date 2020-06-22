@@ -18,38 +18,38 @@ export default function Promo() {
       </div>
       <div className='container'>
         <p>
-          Glavni cilj rada sa decom, bez obzira na simptome, je pomoći detetu da
-          proradi emocije ili zadovolji potrebe koje mu onemogućuju optimalan
-          psihosocijalni razvoj, razvoj pozitivne slike o sebi i razvoj
-          strategija suočavanja i rešavanja problema. Paralelno se radi sa
-          roditeljima, na jačanju njihovih roditeljskih veština kroz
+          Glavni cilj <strong>rada sa decom</strong>, bez obzira na simptome, je
+          pomoći detetu da proradi emocije ili zadovolji potrebe koje mu
+          onemogućuju optimalan psihosocijalni razvoj, razvoj pozitivne slike o
+          sebi i razvoj strategija suočavanja i rešavanja problema. Paralelno se
+          radi sa roditeljima, na jačanju njihovih roditeljskih veština kroz
           psihoedukativni i savetodavni rad. U radu sa decom kombinuju se
           različite tehnike rada prilagođene razvojnim karakteristikama uzrasta
           deteta, individualno ili kroz tematske radionice razvoja određenih
           funkcionalnih veština. Najčešći problemi sa kojima se deca suočavaju
-          su stidljivost, nedostatak samopouzdanja, prolazak kroz težak
-          period života i određena traumatska iskustva, različiti strahovi,
+          su stidljivost, nedostatak samopouzdanja, prolazak kroz težak period
+          života i određena traumatska iskustva, različiti strahovi,
           plačljivost, utučenost, slabu koncentraciju, probleme u učenju,
           agresivno ponašanje, nesigurnost, bes...
         </p>
         <p>
-          Rad sa roditeljima usmeren je na pedagošku i psihološku edukaciju o
-          tome kako bolje razumeti određena dečija ponašanja, zašto se javljaju
-          i šta oni mogu uraditi kako bi olakšali svakodnevno funkcionisanje
-          porodice. Cilj je da roditelji steknu svest o postupanju prema
-          detetu koje ne daju željene rezultate i kako da ih zamene novim i
-          efikasnijim vaspitnim postupcima. Važno je da sagledaju situaciju iz
-          različitih perspektiva i uvide značenje koje ona ima za dete,
-          roditelja i odnos dete-roditelj. Deca predškolskog, školskog i
+          Rad sa <strong>roditeljima</strong> usmeren je na pedagošku i
+          psihološku edukaciju o tome kako bolje razumeti određena dečija
+          ponašanja, zašto se javljaju i šta oni mogu uraditi kako bi olakšali
+          svakodnevno funkcionisanje porodice. Cilj je da roditelji steknu svest
+          o postupanju prema detetu koje ne daju željene rezultate i kako da ih
+          zamene novim i efikasnijim vaspitnim postupcima. Važno je da sagledaju
+          situaciju iz različitih perspektiva i uvide značenje koje ona ima za
+          dete, roditelja i odnos dete-roditelj. Deca predškolskog, školskog i
           srednješkolskog uzrasta prolaze kroz različite faze razvoja a ključno
           je razumeti psihološku podlogu njihovog ponašanja i adekvatno
           odgovoriti u interesu cele porodice.
         </p>
         <p>
-          Glavni ciljevi rada sa odraslima su oslobađanje od emocionalnih
-          problema, disfunkcionalnih ponašanja i iracionalnog načina
-          razmišljanja. Kroz terapijski rad moguće je bolje upoznati sebe i
-          svoje obrasce ponašanja, razmišljanja i osećanja, prepoznati obrasce
+          Glavni ciljevi rada sa <strong>odraslima</strong> su oslobađanje od
+          emocionalnih problema, disfunkcionalnih ponašanja i iracionalnog
+          načina razmišljanja. Kroz terapijski rad moguće je bolje upoznati sebe
+          i svoje obrasce ponašanja, razmišljanja i osećanja, prepoznati obrasce
           ponašanja koji nisu korisni i zameniti ih onim koji vode do
           zadovoljnijeg i ispunjenijeg života. Postizanjem uvida o udelu
           sopstvene odgovornosti za održavanje različitih disfunkcionalnih
