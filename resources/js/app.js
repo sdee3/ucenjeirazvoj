@@ -21,6 +21,8 @@ import {
   withRouter,
 } from "react-router-dom";
 import axios from "axios";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 
 const Alert = lazy(() => import("./components/Alert"));
 const Home = lazy(() => import("./pages/home"));
