@@ -2,6 +2,7 @@ import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 
 const Breadcrumbs = lazy(() => import("../../components/Breadcrumbs"));
+const BoravakCarousel = lazy(() => import("./BoravakCarousel"));
 
 export default function ProduzeniBoravak() {
   return (
@@ -48,12 +49,7 @@ export default function ProduzeniBoravak() {
             <li>Segment upoznavanja sveta oko nas,</li>
             <li>Segment vezan za matematiku, matematičke pojmove i osnovne matematičke operacije.</li>
           </ul>
-          <div className='support-page__image'>
-            <img
-              alt='Učenje i razvoj - Usluge produzenog boravka'
-              src='https://res.cloudinary.com/sdee3-com/image/upload/v1600185633/ucenjeirazvoj/vece/usluge.jpg'
-            />
-          </div>
+          <BoravakCarousel className="support-page__carousel" />
         </div>
       </section>
     </>
