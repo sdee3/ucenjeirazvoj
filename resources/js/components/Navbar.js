@@ -11,7 +11,7 @@ export default function Navbar() {
         <section className='navbar__links navbar__links--left'>
           <Link to='/'>Naslovna</Link>
           <Link to='/teme'>Teme</Link>
-          <Link to='/podrska'>Podrška</Link>
+          <Link to='/usluge'>Usluge</Link>
         </section>
         <div className='navbar__brand'>
           <Link to='/'>
@@ -35,10 +35,10 @@ export default function Navbar() {
           {isMobile ? (
             <>
               <Link to='/teme'>Teme</Link>
-              <Link to='/podrska'>Podrška</Link>
+              <Link to='/usluge'>Usluge</Link>
             </>
           ) : null}
-          <Link to='/o-meni'>O Meni</Link>
+          <Link to='/o-nama'>O Nama</Link>
           <Link to='/citati'>Citati</Link>
           <a href='#contact'>Kontakt</a>
         </section>

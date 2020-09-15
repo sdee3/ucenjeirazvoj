@@ -6,17 +6,17 @@ export default function Support() {
   return (
     <>
       <Helmet>
-        <title>Podrška | Učenje i razvoj</title>
+        <title>Usluge | Učenje i razvoj</title>
         <meta
           name='description'
-          content='Podrška koju portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Da budemo bolja verzija sebe'
+          content='Usluge koje portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Da budemo bolja verzija sebe'
         />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://ucenjeirazvoj.com/' />
         <meta property='og:title' content='Učenje i razvoj' />
         <meta
           property='og:description'
-          content='Podrška koju portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Da budemo bolja verzija sebe'
+          content='Usluge koje portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Da budemo bolja verzija sebe'
         />
         <meta
           property='og:image'
@@ -27,7 +27,7 @@ export default function Support() {
         <meta property='twitter:title' content='Učenje i razvoj' />
         <meta
           property='twitter:description'
-          content='Podrška koju portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Da budemo bolja verzija sebe'
+          content='Usluge koje portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Da budemo bolja verzija sebe'
         />
         <meta
           property='twitter:image'
@@ -36,16 +36,16 @@ export default function Support() {
       </Helmet>
       <section className='support-page'>
         <div className='container'>
-          <h1>Podrška</h1>
+          <h1>Usluge</h1>
           <ul>
             <li>
-              <Link to='/podrska/podrska-deci'>Podrška deci</Link>
+              <Link to='/usluge/produzeni-boravak'>Produženi boravak i program za predškolce</Link>
             </li>
             <li>
-              <Link to='/podrska/podrska-roditeljima'>Podrška roditeljima</Link>
+              <Link to='/usluge/program-za-rani-razvoj'>Program za rani razvoj socijalne i emocionalne inteligencije</Link>
             </li>
             <li>
-              <Link to='/podrska/podrska-odraslima'>Podrška odraslima</Link>
+              <Link to='/usluge/podrska-licnom-rastu-razvoju'>Podrška ličnom rastu i razvoju - Individualni savetodavni i terapijski rad sa decom, roditeljima i odraslima</Link>
             </li>
           </ul>
         </div>

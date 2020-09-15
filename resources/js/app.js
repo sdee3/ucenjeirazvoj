@@ -33,11 +33,11 @@ const Topic = lazy(() => import("./pages/topics/Topic"));
 const EditTopic = lazy(() => import("./pages/topics/Edit"));
 
 const Support = lazy(() => import("./pages/support"));
-const PodrskaDeci = lazy(() => import("./pages/support/PodrskaDeci"));
-const PodrskaRoditeljima = lazy(() =>
-  import("./pages/support/PodrskaRoditeljima")
+const ProduzeniBoravak = lazy(() => import("./pages/support/ProduzeniBoravak"));
+const ProgramZaRaniRazvoj = lazy(() =>
+  import("./pages/support/ProgramZaRaniRazvoj")
 );
-const PodrskaOdraslima = lazy(() => import("./pages/support/PodrskaOdraslima"));
+const PodrskaLicnomRastuRazvoju = lazy(() => import("./pages/support/PodrskaLicnomRastuRazvoju"));
 
 const Quotes = lazy(() => import("./pages/quotes"));
 const About = lazy(() => import("./pages/about"));
@@ -91,24 +91,24 @@ const App = () => {
               <Route exact path='/tema/:slug/admin' component={AdminLogin} />
               <Route exact path='/tema/:slug/edit' component={EditTopic} />
 
-              <Route exact path='/podrska' component={Support} />
+              <Route exact path='/usluge' component={Support} />
               <Route
                 exact
-                path='/podrska/podrska-deci'
-                component={PodrskaDeci}
+                path='/usluge/produzeni-boravak'
+                component={ProduzeniBoravak}
               />
               <Route
                 exact
-                path='/podrska/podrska-roditeljima'
-                component={PodrskaRoditeljima}
+                path='/usluge/program-za-rani-razvoj'
+                component={ProgramZaRaniRazvoj}
               />
               <Route
                 exact
-                path='/podrska/podrska-odraslima'
-                component={PodrskaOdraslima}
+                path='/usluge/podrska-licnom-rastu-razvoju'
+                component={PodrskaLicnomRastuRazvoju}
               />
               <Route exact path='/citati' component={Quotes} />
-              <Route exact path='/o-meni' component={About} />
+              <Route exact path='/o-nama' component={About} />
             </CategoriesContext.Provider>
             <Route component={Page404} />
           </Switch>

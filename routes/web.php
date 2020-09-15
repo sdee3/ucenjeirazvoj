@@ -21,11 +21,11 @@ Route::get('/tema/{slug}', function ($slug) {
     return view('pages/tema', compact(['slug', 'article']));
 });
 
-Route::get('/podrska/*', function () {
+Route::get('/usluge/*', function () {
     return view('pages/podrska');
 });
 
-Route::get('/o-meni', function () {
+Route::get('/o-nama', function () {
     return view('pages/about');
 });
 
