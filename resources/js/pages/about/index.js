@@ -32,14 +32,14 @@ export default function About() {
           samopouzdanje, samostalnost i lični rast i razvoj.Želimo da stvorimo
           pozitivni odnos prema učenju kako bi svako dete osetilo radost uspeha.
         </p>
-        <p>Program smo podelili u četiri tematske celine:</p>
+        <p>Program smo podelili u tri tematske celine:</p>
 
         <ul>
           <li>Produženi boravak za školsku decu i program za predškolce</li>
           <li>Program za rani razvoj socijalne i emocionalne inteligencije</li>
           <li>
             Podrška ličnom rastu i razvoju dece i roditelja i odraslih -
-            individualni i grupni savetodavni i terapijski rad{" "}
+            individualni i grupni savetodavni i terapijski rad
           </li>
         </ul>
         <br />
