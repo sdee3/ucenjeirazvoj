@@ -17,13 +17,16 @@ export default function Contact() {
             <p>Adresa:</p>
             <p>Milentija Popovića 4, 11070, Beograd</p>
             <p>Kontakt telefoni:</p>
-            <p>069/3607149, 064/4180789</p>
+            <p>
+              <a href='tel:+381693607149'>069/3607149</a>,{" "}
+              <a href='tel:+381644180789'>064/4180789</a>
+            </p>
             <p>
               Email:{" "}
               <a href='mailto:info@ucenjeirazvoj.com'>info@ucenjeirazvoj.com</a>
             </p>
             <a
-              className="footer__social-link"
+              className='footer__social-link'
               href='https://www.instagram.com/centarzaucenjeirazvoj/'
               target='_blank'
               rel='noopener noreferrer'
@@ -31,7 +34,7 @@ export default function Contact() {
               <i className='fab fa-instagram' /> @centarzaucenjeirazvoj
             </a>
             <a
-              className="footer__social-link"
+              className='footer__social-link'
               href='https://www.facebook.com/Ucenjeirazvoj-102507074853308/'
               target='_blank'
               rel='noopener noreferrer'
