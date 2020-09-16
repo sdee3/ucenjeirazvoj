@@ -14,12 +14,30 @@ export default function Contact() {
           <section>
             <h3>Informacije o nama</h3>
             <div className='contact-sections__image' />
-            <p>Kontakt telefon:</p>
-            <p>063/177-42-67 - Marijana Petrović, psihoterapijski savetnik</p>
+            <p>Adresa:</p>
+            <p>Milentija Popovića 4, 11070, Beograd</p>
+            <p>Kontakt telefoni:</p>
+            <p>069/3607149, 064/4180789</p>
             <p>
               Email:{" "}
               <a href='mailto:info@ucenjeirazvoj.com'>info@ucenjeirazvoj.com</a>
             </p>
+            <a
+              className="footer__social-link"
+              href='https://www.instagram.com/centarzaucenjeirazvoj/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i className='fab fa-instagram' /> @centarzaucenjeirazvoj
+            </a>
+            <a
+              className="footer__social-link"
+              href='https://www.facebook.com/Ucenjeirazvoj-102507074853308/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i className='fab fa-facebook' /> Centar za učenje i razvoj
+            </a>
           </section>
         </section>
       </div>

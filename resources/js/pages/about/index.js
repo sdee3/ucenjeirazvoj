@@ -7,7 +7,7 @@ export default function About() {
         <h1>O nama</h1>
         <h2>Ko smo mi?</h2>
         <p>
-          Centar za učenje i razvoj je osmišljen je kao edukativni centar koji
+          Centar za učenje i razvoj je osmišljen kao edukativni centar koji
           pruža podrška roditeljima i deci, u vidu organizovanja produženog
           boravka za decu školskog uzrasta, različitih edukativnih programa i
           savetodavnog i terapijskog rada.
