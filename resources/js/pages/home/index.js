@@ -56,7 +56,7 @@ export default function Home() {
           </p>
           <ul>
             <h3>
-              <li>Produženi boravak za školsku decu</li>
+              <li>Produženi boravak za školsku decu i program za predškolce</li>
             </h3>
           </ul>
           <p>

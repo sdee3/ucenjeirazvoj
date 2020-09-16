@@ -39,7 +39,7 @@ export default function Support() {
           <h1>Usluge</h1>
           <ul>
             <li>
-              <Link to='/usluge/produzeni-boravak'>Produženi boravak i program za predškolce</Link>
+              <Link to='/usluge/produzeni-boravak'>Produženi boravak</Link>
             </li>
             <li>
               <Link to='/usluge/radionice-za-decu'>Radionice za decu</Link>
