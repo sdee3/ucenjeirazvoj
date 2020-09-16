@@ -2,7 +2,6 @@ import React, { lazy } from "react";
 import { Helmet } from "react-helmet";
 import { useMediaQuery } from "react-responsive";
 
-const Services = lazy(() => import("./Services"));
 const Promo = lazy(() => import("./Promo"));
 
 export default function Home() {
@@ -45,12 +44,12 @@ export default function Home() {
             alt="Učenje i razvoj cover"
             src={
               isMobile
-                ? "https://res.cloudinary.com/sdee3-com/image/upload/v1592039529/ucenjeirazvoj/ucenje-i-razvoj-cover-min.jpg"
-                : "https://res.cloudinary.com/sdee3-com/image/upload/v1592042661/ucenjeirazvoj/ucenje-i-razvoj-cover-max.png"
+                ? "https://res.cloudinary.com/sdee3-com/image/upload/v1600187912/ucenjeirazvoj/homepage-mobile.jpg"
+                : "https://res.cloudinary.com/sdee3-com/image/upload/v1600187912/ucenjeirazvoj/homepage.jpg"
             }
           />
         </section>
-        <Services />
+
         <Promo />
       </section>
     </>
