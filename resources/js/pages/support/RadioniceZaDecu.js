@@ -112,6 +112,13 @@ export default function RadioniceZaDecu() {
               o napretku deteta.
             </em>
           </p>
+          <div className='container'>
+            <img
+              alt='Učenje i razvoj radionice za decu'
+              className="support-page__image"
+              src='https://res.cloudinary.com/sdee3-com/image/upload/v1591338167/ucenjeirazvoj/ucenje-i-razvoj-logo.png'
+            />
+          </div>
           <h2>Radionice za razvoj pažnje i koncentracije</h2>
           <p>
             Pažnja spada u jednu od najvažnijih veština koja je deci potrebna za
