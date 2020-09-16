@@ -42,7 +42,7 @@ export default function Support() {
               <Link to='/usluge/produzeni-boravak'>Produženi boravak i program za predškolce</Link>
             </li>
             <li>
-              <Link to='/usluge/program-za-rani-razvoj'>Program za rani razvoj socijalne i emocionalne inteligencije</Link>
+              <Link to='/usluge/radionice-za-decu'>Radionice za decu</Link>
             </li>
             <li>
               <Link to='/usluge/podrska-licnom-rastu-razvoju'>Podrška ličnom rastu i razvoju - Individualni savetodavni i terapijski rad sa decom, roditeljima i odraslima</Link>

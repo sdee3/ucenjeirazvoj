@@ -79,25 +79,6 @@ export default function ProduzeniBoravak() {
             Tokom <strong>letnjeg i zimskog raspusta</strong> organizujemo
             različite programe za decu.
           </p>
-          <p>
-            <strong>Program za predškolce</strong> osmišljen je da kroz
-            organizovane aktivnosti podstiče razvoj kreativnosti, psihološku i
-            emocionalnu pripremu dece za školu, razvoj motorike, koncentraciju i
-            upornost. Nastojimo da aktivnostima obuhvatimo sve segmente celovite
-            pripreme za polazak u školu:{" "}
-          </p>
-          <ul>
-            <li>Grafomotorički segment,</li>
-            <li>
-              Segment razvoja predčitalačkih veština i temeljne pripreme za
-              čitanje,
-            </li>
-            <li>Segment upoznavanja sveta oko nas,</li>
-            <li>
-              Segment vezan za matematiku, matematičke pojmove i osnovne
-              matematičke operacije.
-            </li>
-          </ul>
           <BoravakCarousel className='support-page__carousel' />
         </div>
       </section>

@@ -36,8 +36,8 @@ const EditTopic = lazy(() => import("./pages/topics/Edit"));
 
 const Support = lazy(() => import("./pages/support"));
 const ProduzeniBoravak = lazy(() => import("./pages/support/ProduzeniBoravak"));
-const ProgramZaRaniRazvoj = lazy(() =>
-  import("./pages/support/ProgramZaRaniRazvoj")
+const RadioniceZaDecu = lazy(() =>
+  import("./pages/support/RadioniceZaDecu")
 );
 const PodrskaLicnomRastuRazvoju = lazy(() => import("./pages/support/PodrskaLicnomRastuRazvoju"));
 
@@ -101,8 +101,8 @@ const App = () => {
               />
               <Route
                 exact
-                path='/usluge/program-za-rani-razvoj'
-                component={ProgramZaRaniRazvoj}
+                path='/usluge/radionice-za-decu'
+                component={RadioniceZaDecu}
               />
               <Route
                 exact
