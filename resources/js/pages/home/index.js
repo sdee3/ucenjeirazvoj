@@ -2,7 +2,7 @@ import React, { lazy } from "react";
 import { Helmet } from "react-helmet";
 import { useMediaQuery } from "react-responsive";
 
-const Promo = lazy(() => import("./Promo"));
+const Services = lazy(() => import("./Services"));
 
 export default function Home() {
   const isMobile = useMediaQuery({ query: "(max-width: 769px)" });
@@ -143,12 +143,11 @@ export default function Home() {
             Uz pomoć savetovanja i psihoterapije možemo se osloboditi
             emocionalnih problema, disfunkcionalnih ponašanja i iracionalnog
             načina razmišljanja. Svrha savetodavno-terapijskog rada sa{" "}
-            <strong>odraslima</strong>{" "}
-            je da naučimo kako da živimo kvalitetnije i budemo uspešniji u
-            obavljanju svojih uloga. Rezultat pravovremeno sprovedenih
-            psihoterapijskih intervencija je da postanemo zadovoljniji,
-            sigurniji u sebe, sposobniji za bliskost, ljubav, uspešniji u učenju
-            i obavljanju profesionalnih delatnosti.
+            <strong>odraslima</strong> je da naučimo kako da živimo kvalitetnije
+            i budemo uspešniji u obavljanju svojih uloga. Rezultat pravovremeno
+            sprovedenih psihoterapijskih intervencija je da postanemo
+            zadovoljniji, sigurniji u sebe, sposobniji za bliskost, ljubav,
+            uspešniji u učenju i obavljanju profesionalnih delatnosti.
           </p>
           <p>
             Kada se <strong>dete</strong> uključi u proces psihoterapijskog
@@ -172,6 +171,7 @@ export default function Home() {
             u tom procesu.
           </p>
         </div>
+        <Services />
       </section>
     </>
   );
