@@ -9,14 +9,14 @@ export default function Support() {
         <title>Usluge | Učenje i razvoj</title>
         <meta
           name='description'
-          content='Usluge koje portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Da budemo bolja verzija sebe'
+          content='Usluge koje portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Produženi boravak, radionice za decu, programi za lični rast i razvoj.'
         />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://ucenjeirazvoj.com/' />
         <meta property='og:title' content='Učenje i razvoj' />
         <meta
           property='og:description'
-          content='Usluge koje portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Da budemo bolja verzija sebe'
+          content='Usluge koje portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Produženi boravak, radionice za decu, programi za lični rast i razvoj.'
         />
         <meta
           property='og:image'
@@ -27,7 +27,7 @@ export default function Support() {
         <meta property='twitter:title' content='Učenje i razvoj' />
         <meta
           property='twitter:description'
-          content='Usluge koje portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Da budemo bolja verzija sebe'
+          content='Usluge koje portal Učenje i razvoj pruža roditeljima, deci, kao i svim odraslima. Učenje i razvoj - Produženi boravak, radionice za decu, programi za lični rast i razvoj.'
         />
         <meta
           property='twitter:image'

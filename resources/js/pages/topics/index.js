@@ -52,14 +52,14 @@ export default function Teme() {
         <title>Teme | Učenje i razvoj</title>
         <meta
           name='description'
-          content='Teme o deci i odrastanju, roditeljstvu, ličnom rastu i ličnom razvoju. Učenje i razvoj | Da budemo bolja verzija sebe.'
+          content='Teme o deci i odrastanju, roditeljstvu, ličnom rastu i ličnom razvoju. Učenje i razvoj | Produženi boravak, radionice za decu, programi za lični rast i razvoj..'
         />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://ucenjeirazvoj.com/' />
         <meta property='og:title' content='Učenje i razvoj' />
         <meta
           property='og:description'
-          content='Teme o deci i odrastanju, roditeljstvu, ličnom rastu i ličnom razvoju. Učenje i razvoj | Da budemo bolja verzija sebe.'
+          content='Teme o deci i odrastanju, roditeljstvu, ličnom rastu i ličnom razvoju. Učenje i razvoj | Produženi boravak, radionice za decu, programi za lični rast i razvoj..'
         />
         <meta
           property='og:image'
@@ -70,7 +70,7 @@ export default function Teme() {
         <meta property='twitter:title' content='Učenje i razvoj' />
         <meta
           property='twitter:description'
-          content='Teme o deci i odrastanju, roditeljstvu, ličnom rastu i ličnom razvoju. Učenje i razvoj | Da budemo bolja verzija sebe.'
+          content='Teme o deci i odrastanju, roditeljstvu, ličnom rastu i ličnom razvoju. Učenje i razvoj | Produženi boravak, radionice za decu, programi za lični rast i razvoj..'
         />
         <meta
           property='twitter:image'

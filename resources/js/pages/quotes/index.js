@@ -8,14 +8,14 @@ export default function Quotes() {
         <title>Citati o učenju, znanju, razvoju... | Učenje i razvoj</title>
         <meta
           name='description'
-          content='Citati poznatih o učenju, znanju, razvoju, roditeljstvu, porodici...Učenje i razvoj | Da budemo bolja verzija sebe'
+          content='Citati poznatih o učenju, znanju, razvoju, roditeljstvu, porodici...Učenje i razvoj | Produženi boravak, radionice za decu, programi za lični rast i razvoj.'
         />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://ucenjeirazvoj.com/' />
         <meta property='og:title' content='Učenje i razvoj' />
         <meta
           property='og:description'
-          content='Citati poznatih o učenju, znanju, razvoju, roditeljstvu, porodici...Učenje i razvoj | Da budemo bolja verzija sebe'
+          content='Citati poznatih o učenju, znanju, razvoju, roditeljstvu, porodici...Učenje i razvoj | Produženi boravak, radionice za decu, programi za lični rast i razvoj.'
         />
         <meta
           property='og:image'
@@ -26,7 +26,7 @@ export default function Quotes() {
         <meta property='twitter:title' content='Učenje i razvoj' />
         <meta
           property='twitter:description'
-          content='Citati poznatih o učenju, znanju, razvoju, roditeljstvu, porodici...Učenje i razvoj | Da budemo bolja verzija sebe'
+          content='Citati poznatih o učenju, znanju, razvoju, roditeljstvu, porodici...Učenje i razvoj | Produženi boravak, radionice za decu, programi za lični rast i razvoj.'
         />
         <meta
           property='twitter:image'

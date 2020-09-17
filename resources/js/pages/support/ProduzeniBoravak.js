@@ -13,14 +13,14 @@ export default function ProduzeniBoravak() {
             <Link to='/usluge'>Usluge</Link>
             <i className='material-icons'>keyboard_arrow_right</i>
             <Link to={`/usluge/produzeni-boravak`}>
-              Produženi boravak i program za predškolce
+              Produženi boravak
             </Link>
           </>
         }
       />
       <section className='support-page'>
         <div className='container'>
-          <h1>Produženi boravak i program za predškolce</h1>
+          <h1>Produženi boravak</h1>
           <p>
             Produženi boravak je otvoren za decu od I do IV razreda osnovne
             škole. Nalazi se na Novom Beogradu, preko puta Hajata, pored OŠ
