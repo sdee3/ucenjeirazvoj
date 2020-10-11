@@ -1,37 +1,5 @@
 import axios from "axios";
 
-const quillModules = {
-  toolbar: [
-    [{ header: [1, 2, false] }],
-    ["bold", "italic", "underline", "strike", "blockquote"],
-    [{ color: [] }],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-    [{ align: [] }],
-    ["link"],
-    ["clean"],
-  ],
-};
-
-const quillFormats = [
-  "header",
-  "bold",
-  "italic",
-  "underline",
-  "strike",
-  "blockquote",
-  "color",
-  "list",
-  "bullet",
-  "indent",
-  "align",
-  "link",
-];
-
 const createCookie = (cookieName, cookieValue, daysToExpire) => {
   const date = new Date();
   date.setTime(date.getTime() + daysToExpire * 24 * 60 * 60 * 1000);
@@ -120,7 +88,5 @@ export {
   fetchCookie,
   createCookie,
   validateCookie,
-  validateArticle,
-  quillFormats,
-  quillModules,
+  validateArticle
 };

@@ -34,6 +34,7 @@ Route::get('/tema/{slug}', 'SubTopicController@fetch');
 Route::post('/subtopics', 'SubTopicController@submit');
 Route::put('/tema/{slug}', 'SubTopicController@update');
 Route::delete('/tema/{slug}', 'SubTopicController@delete');
+Route::post('/img', 'SubTopicController@handleImage');
 
 Route::post('/upload', 'BlogController@upload');
 

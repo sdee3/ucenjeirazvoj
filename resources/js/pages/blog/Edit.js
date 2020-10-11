@@ -2,8 +2,6 @@ import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import {
-  quillFormats,
-  quillModules,
   isAuthenticated,
   validateCookie,
 } from "../../Helpers";
@@ -132,8 +130,38 @@ export default function Edit({ match }) {
           value={article.cover_url}
         />
         <ReactQuill
-          formats={quillFormats}
-          modules={quillModules}
+          formats={[
+            "header",
+            "bold",
+            "italic",
+            "underline",
+            "strike",
+            "blockquote",
+            "color",
+            "list",
+            "bullet",
+            "indent",
+            "align",
+            "link",
+          ]}
+          modules={{
+            toolbar: {
+              container: [
+                [{ header: [1, 2, false] }],
+                ["bold", "italic", "underline", "strike", "blockquote"],
+                [{ color: [] }],
+                [
+                  { list: "ordered" },
+                  { list: "bullet" },
+                  { indent: "-1" },
+                  { indent: "+1" },
+                ],
+                [{ align: [] }],
+                ["link", "image"],
+                ["clean"],
+              ],
+            },
+          }}
           onChange={handleChange}
           value={article.content}
         />

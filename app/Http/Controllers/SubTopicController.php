@@ -88,4 +88,11 @@ class SubTopicController extends Controller
 
 		return response()->json('SubTopic deleted successfully!', 200);
 	}
+
+	public function handleImage(Request $request)
+	{
+		$path = $request->file('image')->store('images', ['disk' => 'public']);
+
+		return \Storage::url($path);
+	}
 }

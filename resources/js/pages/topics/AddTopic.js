@@ -1,8 +1,6 @@
 import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 import {
-  quillFormats,
-  quillModules,
   isAuthenticated,
   validateCookie,
 } from "../../Helpers";
@@ -14,6 +12,7 @@ const Breadcrumbs = lazy(() => import("../../components/Breadcrumbs"));
 const Topic = lazy(() => import("../../components/Topic"));
 const ReactQuill = lazy(() => import("react-quill"));
 
+
 export default function AddTopic() {
   const [topic, setTopic] = React.useState({
     name: "",
@@ -23,9 +22,31 @@ export default function AddTopic() {
     content: "",
   });
   const [parentTopics, setParentTopics] = React.useState([]);
-
+  
   const setAlert = React.useContext(AlertContext);
-
+  
+  const quillModules = {
+    toolbar: {
+      container: [
+        [{ header: [1, 2, false] }],
+        ["bold", "italic", "underline", "strike", "blockquote"],
+        [{ color: [] }],
+        [
+          { list: "ordered" },
+          { list: "bullet" },
+          { indent: "-1" },
+          { indent: "+1" },
+        ],
+        [{ align: [] }],
+        ["link", "image"],
+        ["clean"],
+      ],
+      handlers: { image: handleImage },
+    },
+  };
+  
+  const quill = React.useRef(null);
+  
   React.useEffect(() => {
     axios.get("/api/topics").then((res) => {
       setParentTopics(res.data);
@@ -34,6 +55,39 @@ export default function AddTopic() {
 
   const handleChange = (value) => {
     setTopic({ ...topic, content: value });
+  };
+
+  const handleImage = () => {
+    let quillEditor = quill.current.getEditor();
+
+    const input = document.createElement("input");
+    const formData = new FormData();
+
+    input.setAttribute("type", "file");
+    input.setAttribute("accept", "image/*");
+    input.click();
+
+    input.onchange = async () => {
+      const file = input.files[0];
+      formData.append("image", file, file.name);
+
+      quillEditor.focus();
+      // Save current cursor state
+      const range = quillEditor.getSelection(true);
+
+      // Move cursor to right side of image (easier to continue typing)
+      quillEditor.setSelection(range.index + 1);
+
+      // API POST, returns image location as string e.g. 'http://www.example.com/images/foo.png'
+      axios.post("/api/img", formData).then((res) => {
+        const imgUrl = window.location.origin + res.data;
+        // Remove placeholder image
+        quillEditor.deleteText(range.index, 1);
+
+        // Insert uploaded image
+        quillEditor.insertEmbed(range.index, "image", imgUrl, "api");
+      });
+    };
   };
 
   const submitArticle = () => {
@@ -94,28 +148,43 @@ export default function AddTopic() {
           <input
             onChange={(e) => setTopic({ ...topic, name: e.target.value })}
             placeholder='Naslov'
-            value={topic.name}
+            defaultValue={topic.name ?? ""}
           />
           <input
             onChange={(e) => setTopic({ ...topic, intro: e.target.value })}
             placeholder='Podnaslov'
-            value={topic.intro}
+            defaultValue={topic.intro ?? ""}
           />
           <input
             onChange={(e) => setTopic({ ...topic, img_url: e.target.value })}
             placeholder='URL ka slici'
-            value={topic.img_url}
+            defaultValue={topic.img_url ?? ""}
           />
           <div className='input-group-prepend'>
             <div className='input-group-prepend__pre-input-text'>{`/tema/`}</div>
             <input
               onChange={(e) => setTopic({ ...topic, slug: e.target.value })}
               placeholder='URL ka tekstu (automatski počinje sa /tema/)'
-              value={topic.slug}
+              defaultValue={topic.slug ?? ""}
             />
           </div>
           <ReactQuill
-            formats={quillFormats}
+            ref={quill}
+            formats={[
+              "header",
+              "bold",
+              "italic",
+              "underline",
+              "strike",
+              "blockquote",
+              "color",
+              "list",
+              "bullet",
+              "indent",
+              "align",
+              "link",
+              "image"
+            ]}
             modules={quillModules}
             onChange={handleChange}
             value={topic.content}
