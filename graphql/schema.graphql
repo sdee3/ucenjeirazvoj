@@ -45,4 +45,6 @@ type Mutation {
     img_url: String
     topic_id: Int!
   ): SubTopic @update
+
+  deleteSubTopic(id: Int!): SubTopic @delete
 }
