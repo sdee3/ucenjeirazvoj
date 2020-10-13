@@ -17,12 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/articles', 'ArticleController@fetch');
-Route::get('/article/{slug}', 'ArticleController@fetch');
-Route::post('/article', 'ArticleController@submit');
-Route::put('/article/{slug}', 'ArticleController@update');
-Route::delete('/article/{slug}', 'ArticleController@delete');
-
 Route::get('/topics', 'TopicController@fetch');
 Route::post('/topics', 'TopicController@submit');
 Route::put('/topics', 'TopicController@update');
@@ -35,14 +29,6 @@ Route::post('/subtopics', 'SubTopicController@submit');
 Route::put('/tema/{slug}', 'SubTopicController@update');
 Route::delete('/tema/{slug}', 'SubTopicController@delete');
 Route::post('/img', 'SubTopicController@handleImage');
-
-Route::post('/upload', 'BlogController@upload');
-
-Route::get('/categories', 'CategoryController@fetch');
-Route::get('/categories/{id}', 'CategoryController@fetch');
-Route::post('/categories', 'CategoryController@store');
-Route::put('/categories', 'CategoryController@update');
-Route::delete('/categories/{id}', 'CategoryController@delete');
 
 Route::post('/admin-login', 'BlogController@handleAdminLogin');
 Route::post('/validate-cookie', 'BlogController@validateCookie');

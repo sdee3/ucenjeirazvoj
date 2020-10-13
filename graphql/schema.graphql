@@ -1,0 +1,48 @@
+# Types:
+
+type Topic {
+  id: ID!
+  name: String!
+}
+
+type SubTopic {
+  id: ID!
+  name: String!
+  topic: Topic! @belongsTo
+  intro: String
+  content: String!
+  slug: String!
+  img_url: String!
+}
+
+# Queries:
+
+type Query {
+  topics: [Topic!]! @all
+  topic(id: Int! @eq): Topic @find
+  subtopics: [SubTopic!]! @all
+  subtopic(slug: String! @eq): SubTopic @find
+}
+
+# Mutations:
+
+type Mutation {
+  createSubTopic(
+    name: String!
+    slug: String!
+    content: String!
+    intro: String
+    img_url: String!
+    topic_id: Int!
+  ): SubTopic! @create
+
+  updateSubTopic(
+    id: Int!
+    name: String
+    slug: String!
+    content: String
+    intro: String
+    img_url: String
+    topic_id: Int!
+  ): SubTopic @update
+}
