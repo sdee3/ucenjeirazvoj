@@ -56,7 +56,6 @@ class SubTopicController extends Controller
 
 		$validator = Validator::make(request()->all(), [
 			'name' => 'required',
-			'topic_id' => 'required',
 			'content' => 'required',
 			'slug' => 'required|alpha_dash',
 		]);
@@ -70,7 +69,7 @@ class SubTopicController extends Controller
 			return response()->json(["messages" => $errors], 422);
 		} else {
 			$subtopic->name = $request->name;
-			$subtopic->topic_id = $request->topic_id;
+			$subtopic->topic_id = $request->topic['id'];
 			$subtopic->slug = $request->slug;
 			$subtopic->intro = $request->intro;
 			$subtopic->content = $request->content;
