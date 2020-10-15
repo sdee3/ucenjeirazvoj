@@ -1,0 +1,28 @@
+.support-page {
+  background-color: $ashe-gray;
+  color: $text-default;
+  min-height: 50vh;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  ul {
+    li {
+      a {
+        color: unset;
+        font-size: 1.2rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+  }
+}

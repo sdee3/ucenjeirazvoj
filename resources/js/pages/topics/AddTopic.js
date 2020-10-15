@@ -6,7 +6,6 @@ import {
 } from "../../Helpers";
 import axios from "axios";
 import { AlertContext } from "../../app";
-import Page404 from "../404";
 
 const Breadcrumbs = lazy(() => import("../../components/Breadcrumbs"));
 const Topic = lazy(() => import("../../components/Topic"));
@@ -193,7 +192,5 @@ export default function AddTopic() {
         </form>
       </section>
     </>
-  ) : (
-    <Page404 />
-  );
+  ) : null;
 }

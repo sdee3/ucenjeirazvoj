@@ -1,0 +1,33 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+@import "variables";
+@import "normalize";
+
+@import "components/main.scss";
+
+@import "pages/home";
+@import "pages/support";
+@import "pages/blog";
+@import "pages/topics";
+@import "pages/about";
+@import "pages/quotes";
+
+@import "responsive";
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#app {
+  overflow-x: hidden;
+}
+
+.page-404 {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}

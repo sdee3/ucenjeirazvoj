@@ -27,22 +27,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Alert = lazy(() => import("./components/Alert"));
 const Home = lazy(() => import("./pages/home"));
 const AdminLogin = lazy(() => import("./pages/blog/admin"));
-const Page404 = lazy(() => import("./pages/404"));
 
-const Topics = lazy(() => import("./pages/topics"));
 const AddTopic = lazy(() => import("./pages/topics/AddTopic"));
-const Topic = lazy(() => import("./pages/topics/Topic"));
 const EditTopic = lazy(() => import("./pages/topics/Edit"));
-
-const Support = lazy(() => import("./pages/support"));
-const ProduzeniBoravak = lazy(() => import("./pages/support/ProduzeniBoravak"));
-const RadioniceZaDecu = lazy(() =>
-  import("./pages/support/RadioniceZaDecu")
-);
-const PodrskaLicnomRastuRazvoju = lazy(() => import("./pages/support/PodrskaLicnomRastuRazvoju"));
-
-const Quotes = lazy(() => import("./pages/quotes"));
-const About = lazy(() => import("./pages/about"));
 
 const Navbar = lazy(() => import("./components/Navbar"));
 const Contact = lazy(() => import("./components/Contact"));
@@ -86,33 +73,11 @@ const App = () => {
             <CategoriesContext.Provider
               value={{ categories, updateCategories }}
             >
-              <Route exact path='/teme' component={Topics} />
               <Route exact path='/teme/new' component={AddTopic} />
               <Route exact path='/teme/admin' component={AdminLogin} />
-              <Route exact path='/tema/:slug' component={Topic} />
               <Route exact path='/tema/:slug/admin' component={AdminLogin} />
               <Route exact path='/tema/:slug/edit' component={EditTopic} />
-
-              <Route exact path='/usluge' component={Support} />
-              <Route
-                exact
-                path='/usluge/produzeni-boravak'
-                component={ProduzeniBoravak}
-              />
-              <Route
-                exact
-                path='/usluge/radionice-za-decu'
-                component={RadioniceZaDecu}
-              />
-              <Route
-                exact
-                path='/usluge/podrska-licnom-rastu-razvoju'
-                component={PodrskaLicnomRastuRazvoju}
-              />
-              <Route exact path='/citati' component={Quotes} />
-              <Route exact path='/o-nama' component={About} />
             </CategoriesContext.Provider>
-            <Route component={Page404} />
           </Switch>
           <Contact />
           <Footer />

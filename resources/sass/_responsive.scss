@@ -1,0 +1,175 @@
+@media (max-width: 769px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.3rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+    line-height: 1;
+  }
+
+  .container {
+    width: unset !important;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .radio-container {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    display: block;
+
+    .container {
+      height: 100%;
+    }
+
+    &__mobile-buttons {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+
+      label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+
+        span {
+          display: block;
+          width: 25px;
+          height: 10px;
+          border-top: 2px solid $text-default;
+        }
+      }
+    }
+
+    #nav-check {
+      &:not(:checked) {
+        ~ .navbar__links {
+          height: 0px;
+        }
+      }
+
+      &:checked {
+        ~ .navbar__links {
+          height: 35vh;
+          overflow-y: auto;
+        }
+      }
+    }
+
+    &__links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: $light-blue;
+      height: 0px;
+      transition: height 0.15s ease-in;
+      overflow-y: hidden;
+      top: 150px;
+      right: 0;
+
+      a {
+        display: block;
+
+        &:first-of-type {
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+
+    &__brand {
+      a {
+        min-width: unset;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .home-page {
+    &__promo {
+      &-text {
+        top: 0;
+        left: 1rem;
+
+        h3 {
+          font-size: 1rem;
+        }
+      }
+
+      .container {
+        padding-top: 0.5rem;
+      }
+    }
+
+    &__services {
+      padding-bottom: 3rem;
+    }
+
+    &__main-img {
+      height: 100%;
+      margin-bottom: 2rem;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .categories,
+    .services {
+      grid-template-columns: 1fr;
+      grid-column-gap: unset;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+
+  .breadcrumb {
+    .container {
+      flex-direction: column;
+    }
+  }
+
+  .contact {
+    &-sections {
+      grid-template-columns: 1fr !important;
+      grid-column-gap: unset !important;
+      grid-row-gap: 1rem;
+
+      form {
+        max-width: 90vw;
+      }
+    }
+  }
+
+  .question {
+    p {
+      font-size: 1rem !important;
+    }
+  }
+
+  .support-page {
+    background-position: 20% 40%;
+  }
+
+  .topics-page {
+    &__topics {
+      &--subtopics {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

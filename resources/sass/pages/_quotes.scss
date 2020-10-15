@@ -1,0 +1,20 @@
+.quotes-page {
+  margin-bottom: 10rem;
+
+  &__category {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    ul {
+      ul {
+        li {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { isAuthenticated, validateCookie } from "../../Helpers";
 import { AlertContext } from "../../app";
-import Page404 from "../404";
 
 const ReactQuill = lazy(() => import("react-quill"));
 
@@ -190,9 +189,7 @@ class Edit extends React.Component {
           </section>
         </section>
       </section>
-    ) : (
-      <Page404 />
-    );
+    ) : null;
   }
 }
 

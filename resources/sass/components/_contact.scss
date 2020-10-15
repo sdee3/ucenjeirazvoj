@@ -1,0 +1,73 @@
+.contact {
+  background: $light-blue;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: -50px;
+    left: -10%;
+    width: 120%;
+    height: 90px;
+    transform: rotateZ(2deg);
+    -o-transform: rotateZ(2deg);
+    -moz-transform: rotateZ(2deg);
+    -webkit-transform: rotateZ(2deg);
+    -ms-transform: rotateZ(2deg);
+    background: $light-blue;
+  }
+
+  .container {
+    width: 100%;
+
+    h2 {
+      text-align: center;
+    }
+
+    .contact-sections {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 3rem;
+      margin-top: 5rem;
+
+      &__image {
+        background-image: url("https://res.cloudinary.com/sdee3-com/image/upload/v1591338167/ucenjeirazvoj/ucenje-i-razvoj-logo.png");
+        height: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      a {
+        color: $cyan;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        input,
+        textarea {
+          border: 1px solid $border-grey;
+          border-radius: 2px;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          padding-left: 0.5rem;
+        }
+
+        input {
+          min-height: 40px;
+          width: 100%;
+        }
+
+        textarea {
+          padding-top: 0.5rem;
+        }
+      }
+    }
+  }
+}

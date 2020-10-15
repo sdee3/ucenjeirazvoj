@@ -1,0 +1,19 @@
+.footer {
+  color: $text-default;
+  background: $white;
+  font-weight: bold;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    i {
+      font-size: 1.5rem;
+      margin-right: 0.75rem;
+    }
+  }
+}
