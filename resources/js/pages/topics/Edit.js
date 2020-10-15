@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -76,18 +77,18 @@ class Edit extends React.Component {
     validateCookie()
       .then(() =>
         axios.put(`/api/tema/${originalSlug}`, article).then(() => {
+          axios.post(`${process.env.MIX_GATSBY_URL}/__refresh`);
           setAlert(
             "Tekst je uspešno ažuriran! Bićete vraćeni nazad za par sekundi...",
             "success"
           );
 
           setTimeout(() => {
-            window.location.href = `/tema/${article.slug}`;
+            window.location.href = `${process.env.MIX_GATSBY_URL}/tema/${article.slug}`;
           }, 2500);
         })
       )
-      .catch((err) => console.log(err));
-    //setAlert(err.response.data.messages[0], "danger"));
+      .catch((err) => setAlert(err, 'danger'));
   };
 
   render() {
@@ -95,7 +96,7 @@ class Edit extends React.Component {
 
     return Object.keys(article).length && isAuthenticated() ? (
       <section className='blog-page container'>
-        <Link to={`/tema/${article.slug}`}>
+        <Link to={`${process.env.MIX_GATSBY_URL}/tema/${article.slug}`}>
           <button className='button btn-big'>Go Back</button>
         </Link>
         <h1 className='h1-small'>You are editing {originalTitle}:</h1>

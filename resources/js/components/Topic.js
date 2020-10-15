@@ -27,11 +27,6 @@ export default function Topic({ topics, topic_id, handleRadioChange }) {
     });
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    setInputVisible(!inputVisible);
-  };
-
   const handleKeyPress = (e) => {
     const { id } = e.currentTarget;
 
@@ -64,7 +59,7 @@ export default function Topic({ topics, topic_id, handleRadioChange }) {
       setAlert("Ime teme je obavezno!", "danger");
     }
   };
-
+/* 
   const deleteCategory = (id) => {
     if (confirm("Da li sigurno želite da obrišete ovu temu?")) {
       axios
@@ -74,7 +69,7 @@ export default function Topic({ topics, topic_id, handleRadioChange }) {
         })
         .catch((err) => setAlert(err, "danger"));
     }
-  };
+  }; */
 
   const toggleEditable = (e) => {
     e.preventDefault();
@@ -124,7 +119,7 @@ export default function Topic({ topics, topic_id, handleRadioChange }) {
                   Izmena imena
                 </button>
               )}
-              <button
+              {/* <button
                 className='button button--edit'
                 onClick={(e) => {
                   e.preventDefault();
@@ -132,7 +127,7 @@ export default function Topic({ topics, topic_id, handleRadioChange }) {
                 }}
               >
                 Obriši
-              </button>
+              </button> */}
             </label>
           ))
         : null}

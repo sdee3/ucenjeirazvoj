@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -93,9 +94,9 @@ export default function AddTopic() {
     validateCookie()
       .then(() => {
         axios
-          .post("/api/subtopics", topic)
+          .post(`/api/subtopics`, topic)
           .then(() => {
-            window.location.href = "/teme";
+            window.location.href = `${process.env.MIX_GATSBY_URL}/teme`;
           })
           .catch((err) => setAlert(err.response.data.message, "danger"));
       })
@@ -120,7 +121,7 @@ export default function AddTopic() {
       <Breadcrumbs
         page={
           <>
-            <Link to='/teme'>Teme</Link>
+            <Link to={`${process.env.MIX_GATSBY_URL}/teme`}>Teme</Link>
             <i className='material-icons'>keyboard_arrow_right</i>
             <Link to='/teme/new'>Novi tekst</Link>
           </>
