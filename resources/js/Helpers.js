@@ -2,6 +2,15 @@ import axios from 'axios';
 
 const isDocumentDefined = () => typeof document !== 'undefined';
 
+const redirectToAdminLogin = originalUrl => {
+  if (originalUrl === 'edit') {
+    window.location.href = window.location.href.replace('/edit', '/admin');
+  }
+
+  else
+    window.location.href = '/teme/admin';
+};
+
 const createCookie = (cookieName, cookieValue, daysToExpire) => {
   const date = new Date();
   date.setTime(date.getTime() + daysToExpire * 24 * 60 * 60 * 999);
@@ -84,4 +93,5 @@ export {
   createCookie,
   validateCookie,
   validateArticle,
+  redirectToAdminLogin
 };

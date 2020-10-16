@@ -1,8 +1,7 @@
 /* eslint-disable no-undef */
 import React, { lazy } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
-import { isAuthenticated, validateCookie } from "../../Helpers";
+import { isAuthenticated, redirectToAdminLogin, validateCookie } from "../../Helpers";
 import { AlertContext } from "../../app";
 
 const ReactQuill = lazy(() => import("react-quill"));
@@ -96,9 +95,9 @@ class Edit extends React.Component {
 
     return Object.keys(article).length && isAuthenticated() ? (
       <section className='blog-page container'>
-        <Link to={`${process.env.MIX_GATSBY_URL}/tema/${article.slug}`}>
+        <a href={`${process.env.MIX_GATSBY_URL}/tema/${article.slug}`}>
           <button className='button btn-big'>Go Back</button>
-        </Link>
+        </a>
         <h1 className='h1-small'>You are editing {originalTitle}:</h1>
         <section className='edit-article__inputs'>
           <div className='edit-article__inputs--category-select'>
@@ -190,7 +189,7 @@ class Edit extends React.Component {
           </section>
         </section>
       </section>
-    ) : null;
+    ) : !isAuthenticated() ? redirectToAdminLogin('edit') : null;
   }
 }
 

@@ -237,6 +237,10 @@
       padding-bottom: 1.5rem;
       object-fit: cover;
       text-align: center;
+
+      img {
+        width: 100%;
+      }
     }
 
     &__link {

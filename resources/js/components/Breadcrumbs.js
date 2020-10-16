@@ -1,11 +1,11 @@
+/* eslint-disable no-undef */
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function Breadcrumbs({ page }) {
   return (
     <section className='breadcrumb'>
       <div className='container'>
-        <Link to='/'>Početna strana</Link>
+        <a href={`${process.env.MIX_GATSBY_URL}`}>Početna strana</a>
         <i className='material-icons'>keyboard_arrow_right</i>
         {page}
       </div>

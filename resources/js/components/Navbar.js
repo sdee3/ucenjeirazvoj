@@ -1,7 +1,7 @@
+/* eslint-disable no-undef */
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import onClickOutside from "react-onclickoutside";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 769px)" });
@@ -13,19 +13,17 @@ const Navbar = () => {
     <section className='navbar'>
       <div className='container'>
         <section className='navbar__links navbar__links--left'>
-          <Link to='/'>Naslovna</Link>
-          <Link to='/teme'>Teme</Link>
-          <Link to='/usluge'>Usluge</Link>
+          <a href={`${process.env.MIX_GATSBY_URL}`}>Naslovna</a>
         </section>
         <div className='navbar__brand'>
-          <Link to='/'>
+          <a href={`${process.env.MIX_GATSBY_URL}`}>
             <div className='navbar__brand--image'>
               <img
                 src='https://res.cloudinary.com/sdee3-com/image/upload/v1591338251/ucenjeirazvoj/ucenje-i-razvoj-logo-large.png'
                 alt='Ucenje i razvoj logo'
               />
             </div>
-          </Link>
+          </a>
         </div>
         <input
           type='checkbox'
@@ -44,23 +42,11 @@ const Navbar = () => {
         <section className='navbar__links navbar__links--right'>
           {isMobile ? (
             <>
-              <Link onClick={() => setIsHamChecked(false)} to='/'>
+              <a onClick={() => setIsHamChecked(false)} href={`${process.env.MIX_GATSBY_URL}`}>
                 Početna
-              </Link>
-              <Link onClick={() => setIsHamChecked(false)} to='/teme'>
-                Teme
-              </Link>
-              <Link onClick={() => setIsHamChecked(false)} to='/usluge'>
-                Usluge
-              </Link>
+              </a>
             </>
           ) : null}
-          <Link onClick={() => setIsHamChecked(false)} to='/o-nama'>
-            O Nama
-          </Link>
-          <Link onClick={() => setIsHamChecked(false)} to='/citati'>
-            Citati
-          </Link>
           <a onClick={() => setIsHamChecked(false)} href='#contact'>
             Kontakt
           </a>

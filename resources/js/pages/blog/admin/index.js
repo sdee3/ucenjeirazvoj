@@ -14,7 +14,12 @@ export default function AdminLogin() {
       .then((res) => {
         createCookie("x-auth", res.headers["x-auth"]);
         alert("Uspešna autorizacija!");
-        window.location.href = currentUrl.replace("/admin", "");
+
+        if (currentUrl === '/teme/admin')
+          window.location.href = currentUrl.replace("/admin", "");
+        else {
+          window.location.href = currentUrl.replace("/admin", "/edit");
+        }
       })
       .catch((err) => {
         alert(err.response.data);

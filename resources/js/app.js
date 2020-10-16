@@ -28,6 +28,8 @@ const Alert = lazy(() => import("./components/Alert"));
 const Home = lazy(() => import("./pages/home"));
 const AdminLogin = lazy(() => import("./pages/blog/admin"));
 
+const TopicsAdminIndex = lazy(() => import("./pages/topics"));
+const Topic = lazy(() => import("./pages/topics/Topic"));
 const AddTopic = lazy(() => import("./pages/topics/AddTopic"));
 const EditTopic = lazy(() => import("./pages/topics/Edit"));
 
@@ -73,6 +75,8 @@ const App = () => {
             <CategoriesContext.Provider
               value={{ categories, updateCategories }}
             >
+              <Route exact path='/teme' component={TopicsAdminIndex} />
+              <Route exact path='/tema/:slug' component={Topic} />
               <Route exact path='/teme/new' component={AddTopic} />
               <Route exact path='/teme/admin' component={AdminLogin} />
               <Route exact path='/tema/:slug/admin' component={AdminLogin} />

@@ -3,6 +3,7 @@ import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 import {
   isAuthenticated,
+  redirectToAdminLogin,
   validateCookie,
 } from "../../Helpers";
 import axios from "axios";
@@ -121,7 +122,7 @@ export default function AddTopic() {
       <Breadcrumbs
         page={
           <>
-            <Link to={`${process.env.MIX_GATSBY_URL}/teme`}>Teme</Link>
+            <a href={`${process.env.MIX_GATSBY_URL}/teme`}>Teme</a>
             <i className='material-icons'>keyboard_arrow_right</i>
             <Link to='/teme/new'>Novi tekst</Link>
           </>
@@ -193,5 +194,5 @@ export default function AddTopic() {
         </form>
       </section>
     </>
-  ) : null;
+  ) : redirectToAdminLogin('new');
 }
